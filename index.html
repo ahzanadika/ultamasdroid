@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nadika Boardgame</title>
+
+<!-- ══ PWA Meta Tags ══ -->
+<meta name="application-name"        content="Nadika">
+<meta name="description"             content="Kuis Pelestarian Lingkungan – Ular Tangga Pengolahan Sampah">
+<meta name="theme-color"             content="#1a4a2e">
+<meta name="mobile-web-app-capable"  content="yes">
+
+<!-- iOS PWA -->
+<meta name="apple-mobile-web-app-capable"          content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title"            content="Nadika">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<!-- Manifest & Favicon -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon"     href="data:image/png;base64,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" type="image/png">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --green-deep:  #1a4a2e;
+  --green-mid:   #2d7a50;
+  --green-light: #4caf7d;
+  --gold:        #d4a843;
+  --gold-light:  #f0c96a;
+  --cream:       #fdf8ef;
+  --brown:       #7b5e3a;
+  --red:         #c0392b;
+  --red-light:   #f8d7da;
+  --green-ok:    #1e7e44;
+  --green-ok-bg: #d4edda;
+  --shadow:      0 8px 32px rgba(26,74,46,0.18);
+  --radius:      18px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #0d2b1a 0%, #1a4a2e 40%, #2d7a50 100%);
+  min-height: 100vh;
+  color: var(--green-deep);
+}
+
+/* ─── LOADING OVERLAY ─── */
+#loading-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #0d2b1a;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 20px;
+}
+.loading-logo { font-size: 4rem; animation: pulse 1.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.12);} }
+.loading-title { font-family:'Playfair Display',serif; color:var(--gold); font-size:1.4rem; text-align:center; }
+.loading-sub { color:#8dc9a0; font-size:0.85rem; text-align:center; }
+.loading-bar-wrap { width:200px; height:6px; background:rgba(255,255,255,0.1); border-radius:3px; overflow:hidden; }
+.loading-bar { height:100%; width:0%; background:var(--gold); border-radius:3px; transition:width 0.4s ease; }
+.loading-error { color:#ff8080; font-size:0.85rem; text-align:center; max-width:280px; display:none; }
+.btn-retry { background:var(--gold); color:var(--green-deep); border:none; border-radius:10px; padding:10px 22px; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.9rem; cursor:pointer; display:none; margin-top:4px; }
+
+/* ─── HEADER ─── */
+.app-header {
+  background: linear-gradient(90deg, var(--green-deep), var(--green-mid));
+  padding: 16px 20px; display: flex; align-items: center; gap: 12px;
+  border-bottom: 3px solid var(--gold);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.logo { font-size: 1.9rem; }
+.header-title { flex: 1; }
+.header-title h1 { font-family:'Playfair Display',serif; color:var(--gold); font-size:1.1rem; line-height:1.2; }
+.header-title p  { color:#8dc9a0; font-size:0.72rem; margin-top:2px; }
+.sync-badge {
+  font-size:0.65rem; font-weight:800; padding:3px 9px; border-radius:20px;
+  border:1.5px solid; letter-spacing:0.5px; text-transform:uppercase;
+  transition:all 0.3s;
+}
+.sync-badge.live  { background:rgba(76,175,125,0.15); border-color:var(--green-light); color:var(--green-light); }
+.sync-badge.local { background:rgba(212,168,67,0.15); border-color:var(--gold); color:var(--gold); }
+
+/* ─── SCREENS ─── */
+.screen { display:none; }
+.screen.active { display:block; animation:fadeIn 0.35s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(14px);} to{opacity:1;transform:none;} }
+
+/* ─── MENU ─── */
+#screen-menu { padding:20px 16px 88px; }
+.menu-hero {
+  text-align:center; padding:26px 18px 18px;
+  background:rgba(255,255,255,0.05); border-radius:var(--radius);
+  border:1px solid rgba(212,168,67,0.25); margin-bottom:20px;
+}
+.menu-hero h2 { font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.5rem; margin-bottom:6px; }
+.menu-hero p  { color:#8dc9a0; font-size:0.85rem; }
+.sheet-info   { color:rgba(255,255,255,0.35); font-size:0.72rem; margin-top:8px; }
+
+.section-label { color:var(--gold); font-weight:800; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+
+.category-grid { display:grid; grid-template-columns:1fr 1fr; gap:11px; margin-bottom:20px; }
+.cat-card {
+  background:var(--cream); border-radius:var(--radius); padding:16px 12px;
+  text-align:center; cursor:pointer; border:3px solid transparent;
+  transition:all 0.22s; box-shadow:var(--shadow); position:relative; overflow:hidden;
+}
+.cat-card:hover, .cat-card.selected { border-color:var(--green-light); transform:translateY(-3px); }
+.cat-card.selected { background:#e8f5ee; }
+.cat-icon   { font-size:2.2rem; display:block; margin-bottom:6px; }
+.cat-name   { font-weight:800; color:var(--green-deep); font-size:0.82rem; line-height:1.3; }
+.cat-count  { font-size:0.7rem; color:var(--brown); margin-top:3px; }
+.cat-check  { position:absolute; top:7px; right:7px; background:var(--green-light); color:#fff; border-radius:50%; width:20px; height:20px; display:none; align-items:center; justify-content:center; font-size:0.65rem; font-weight:800; }
+.cat-card.selected .cat-check { display:flex; }
+
+.action-btns { display:flex; flex-direction:column; gap:11px; }
+.btn-primary {
+  background:linear-gradient(135deg,var(--green-mid),var(--green-deep));
+  color:#fff; border:none; border-radius:50px; padding:15px 26px;
+  font-family:'Nunito',sans-serif; font-weight:800; font-size:0.95rem;
+  cursor:pointer; display:flex; align-items:center; justify-content:center; gap:9px;
+  box-shadow:0 6px 20px rgba(45,122,80,0.4); transition:all 0.2s; width:100%;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(45,122,80,0.5); }
+.btn-gold { background:linear-gradient(135deg,var(--gold),#b8882a); color:var(--green-deep); }
+.btn-gold:hover { box-shadow:0 10px 28px rgba(212,168,67,0.4); }
+.btn-sync {
+  background:rgba(255,255,255,0.08); color:#8dc9a0; border:1.5px solid rgba(141,201,160,0.3);
+  border-radius:50px; padding:11px 18px; font-family:'Nunito',sans-serif; font-weight:700;
+  font-size:0.82rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:7px;
+  transition:all 0.2s; width:100%;
+}
+.btn-sync:hover { background:rgba(255,255,255,0.13); border-color:#8dc9a0; }
+.btn-sync.syncing .sync-spinner { animation:spin 0.7s linear infinite; display:inline-block; }
+@keyframes spin { to{transform:rotate(360deg);} }
+
+/* ─── QUIZ ─── */
+#screen-quiz { padding:14px 14px 88px; }
+.quiz-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.btn-back { background:rgba(255,255,255,0.13); color:#fff; border:none; border-radius:50%; width:38px; height:38px; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background 0.2s; }
+.btn-back:hover { background:rgba(255,255,255,0.22); }
+.quiz-meta { flex:1; }
+.quiz-cat-lbl { color:var(--gold-light); font-weight:800; font-size:0.82rem; }
+.progress-bar { height:5px; background:rgba(255,255,255,0.13); border-radius:3px; margin-top:5px; overflow:hidden; }
+.progress-fill { height:100%; background:var(--gold); border-radius:3px; transition:width 0.5s ease; }
+.quiz-counter { color:var(--gold); font-weight:800; font-size:0.82rem; }
+
+.question-card { background:var(--cream); border-radius:var(--radius); padding:20px 16px; box-shadow:var(--shadow); margin-bottom:14px; }
+.q-number { color:var(--brown); font-size:0.75rem; font-weight:700; margin-bottom:7px; letter-spacing:1px; }
+.q-text   { font-weight:700; color:var(--green-deep); font-size:0.97rem; line-height:1.55; }
+
+.options-list { display:flex; flex-direction:column; gap:9px; }
+.opt-btn {
+  background:var(--cream); border:2.5px solid #d0e8d8; border-radius:13px;
+  padding:13px 14px; text-align:left; cursor:pointer;
+  font-family:'Nunito',sans-serif; font-size:0.88rem; font-weight:600;
+  color:var(--green-deep); transition:all 0.2s;
+  display:flex; align-items:flex-start; gap:10px;
+  box-shadow:0 2px 8px rgba(26,74,46,0.06);
+}
+.opt-btn:hover:not(:disabled) { border-color:var(--green-light); background:#e8f5ee; transform:translateX(3px); }
+.opt-btn:disabled { cursor:default; }
+.opt-btn.correct { border-color:var(--green-ok);  background:var(--green-ok-bg); color:var(--green-ok); }
+.opt-btn.wrong   { border-color:var(--red);       background:var(--red-light);   color:var(--red); }
+.opt-lbl {
+  background:var(--green-light); color:#fff; border-radius:7px;
+  min-width:26px; height:26px; display:flex; align-items:center; justify-content:center;
+  font-weight:800; font-size:0.82rem; flex-shrink:0; margin-top:-1px;
+}
+.opt-btn.correct .opt-lbl { background:var(--green-ok); }
+.opt-btn.wrong   .opt-lbl { background:var(--red); }
+
+.feedback-card {
+  border-radius:var(--radius); padding:16px; margin-top:12px;
+  display:none; animation:slideUp 0.35s ease; box-shadow:var(--shadow);
+}
+@keyframes slideUp { from{opacity:0;transform:translateY(16px);} to{opacity:1;transform:none;} }
+.feedback-card.correct { background:var(--green-ok-bg); border:2px solid var(--green-ok); }
+.feedback-card.wrong   { background:var(--red-light);   border:2px solid var(--red); }
+.fb-head { font-weight:800; font-size:0.95rem; margin-bottom:7px; display:flex; align-items:center; gap:7px; }
+.feedback-card.correct .fb-head { color:var(--green-ok); }
+.feedback-card.wrong   .fb-head { color:var(--red); }
+.fb-text { font-size:0.86rem; line-height:1.6; color:#333; }
+.btn-next { margin-top:14px; display:none; }
+
+/* ─── AWARD ─── */
+#screen-award { padding:14px 14px 88px; }
+.award-card-form { background:var(--cream); border-radius:var(--radius); padding:22px 16px; box-shadow:var(--shadow); }
+.award-card-form h2 { font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.25rem; margin-bottom:5px; }
+.award-card-form p  { color:var(--brown); font-size:0.83rem; margin-bottom:18px; }
+.form-group { margin-bottom:14px; }
+.form-group label { display:block; font-weight:700; color:var(--green-deep); margin-bottom:5px; font-size:0.85rem; }
+.form-group input {
+  width:100%; padding:12px 14px; border:2.5px solid #c8dfc8; border-radius:11px;
+  font-family:'Nunito',sans-serif; font-size:0.93rem; color:var(--green-deep);
+  background:#fff; outline:none; transition:border-color 0.2s;
+}
+.form-group input:focus { border-color:var(--green-light); }
+.camera-area { border:2.5px dashed #c8dfc8; border-radius:13px; padding:16px; text-align:center; }
+.cam-placeholder-icon { color:#90a9a0; font-size:2.4rem; }
+.cam-hint { color:var(--brown); font-size:0.8rem; margin:6px 0 12px; }
+#video-el, #photo-el { width:100%; max-width:320px; border-radius:10px; display:none; }
+.btn-sm {
+  background:var(--green-mid); color:#fff; border:none; border-radius:9px;
+  padding:9px 16px; font-family:'Nunito',sans-serif; font-weight:700; font-size:0.82rem;
+  cursor:pointer; margin:3px; transition:all 0.2s;
+}
+.btn-sm:hover { background:var(--green-deep); }
+.btn-sm.alt { background:var(--brown); }
+
+/* ─── MODAL KARTU ─── */
+.modal-bg {
+  display:none; position:fixed; inset:0; z-index:500;
+  background:rgba(0,0,0,0.88); align-items:flex-start; justify-content:center;
+  padding:16px; overflow-y:auto;
+}
+.modal-bg.open { display:flex; }
+.modal-wrap { width:100%; max-width:380px; margin:auto; animation:zoomIn 0.32s ease; position:relative; }
+@keyframes zoomIn { from{opacity:0;transform:scale(0.84);} to{opacity:1;transform:scale(1);} }
+.modal-close { position:absolute; top:-10px; right:-8px; background:#444; color:#fff; border:none; border-radius:50%; width:34px; height:34px; font-size:1.1rem; cursor:pointer; z-index:10; }
+
+/* ─── AWARD CARD (Portrait) ─── */
+#award-card {
+  background:linear-gradient(160deg,#0d2b1a 0%,#1a4a2e 50%,#2d5a38 100%);
+  border-radius:22px; overflow:hidden;
+  border:3px solid var(--gold); box-shadow:0 0 60px rgba(212,168,67,0.35);
+}
+.ac-stripe { background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold)); height:6px; }
+.ac-top    { text-align:center; padding:18px 18px 0; }
+.ac-top .ac-icon { font-size:2.6rem; }
+.ac-heading {
+  font-family:'Playfair Display',serif; color:var(--gold);
+  font-size:1.05rem; text-align:center; padding:10px 18px 0; line-height:1.35;
+}
+.ac-sub { color:#8dc9a0; text-align:center; font-size:0.7rem; padding:4px 18px 10px; }
+.ac-divider { height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0 18px; }
+.ac-photo-wrap {
+  width:100px; height:100px; border-radius:50%; overflow:hidden;
+  border:4px solid var(--gold); margin:14px auto 0;
+  background:rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center;
+}
+.ac-photo-wrap img { width:100%; height:100%; object-fit:cover; }
+.ac-photo-placeholder { color:rgba(255,255,255,0.25); font-size:2.8rem; }
+.ac-awarded { color:#8dc9a0; text-align:center; font-size:0.7rem; margin:12px 0 3px; }
+.ac-winner  { font-family:'Playfair Display',serif; color:#fff; text-align:center; font-size:1.35rem; padding:0 18px; line-height:1.2; }
+.ac-vs      { color:var(--gold-light); text-align:center; font-size:0.72rem; margin:7px 0; }
+.ac-loser   { color:#cde8d4; text-align:center; font-size:0.95rem; padding:0 18px; font-weight:700; }
+.ac-badge   { margin:14px 18px 0; padding:11px 16px; background:linear-gradient(135deg,var(--gold),#b8882a); border-radius:11px; text-align:center; }
+.ac-badge-title { font-family:'Playfair Display',serif; color:var(--green-deep); font-size:0.92rem; font-weight:900; line-height:1.3; }
+.ac-badge-sub   { color:var(--green-deep); font-size:0.65rem; margin-top:2px; opacity:0.8; }
+.ac-date { color:rgba(141,201,160,0.6); text-align:center; font-size:0.65rem; margin:10px 0 0; }
+
+/* ─── SHARE SECTION ─── */
+.share-section { margin-top:16px; }
+.share-section h3 { color:var(--gold-light); font-size:0.88rem; text-align:center; margin-bottom:10px; }
+.share-grid { display:grid; grid-template-columns:-1fr 1fr; gap:9px; }
+.share-btn {
+  border:none; border-radius:11px; padding:11px 8px;
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:0.78rem;
+  cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:4px;
+  transition:all 0.2s;
+}
+.share-btn:hover { transform:translateY(-2px); }
+.share-btn .si { font-size:1.3rem; }
+.s-save   { background:var(--gold); color:var(--green-deep); }
+.s-wast   { background:#25D366; color:#fff; }
+.s-wach   { background:#128C7E; color:#fff; }
+.s-soc    { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+
+/* Canvas preview */
+.canvas-preview-wrap { margin-top:16px; }
+.canvas-hint {
+  display:flex; align-items:flex-start; gap:10px;
+  background:rgba(212,168,67,0.15); border:1.5px solid rgba(212,168,67,0.4);
+  border-radius:12px; padding:12px 14px; margin-bottom:12px;
+  color:#f0c96a; font-size:0.82rem; line-height:1.5;
+}
+.canvas-hint-icon { font-size:1.4rem; flex-shrink:0; }
+
+/* ─── BOTTOM NAV ─── */
+.bottom-nav {
+  position:fixed; bottom:0; left:0; right:0;
+  background:var(--green-deep); border-top:2px solid rgba(212,168,67,0.25);
+  display:flex; padding:8px 0; z-index:100;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.3);
+}
+.nav-btn {
+  flex:1; display:flex; flex-direction:column; align-items:center;
+  padding:5px; background:none; border:none; color:#8dc9a0;
+  cursor:pointer; transition:color 0.2s;
+  font-family:'Nunito',sans-serif; font-size:0.62rem; font-weight:700; gap:2px;
+}
+.nav-btn .ni { font-size:1.35rem; }
+.nav-btn.active, .nav-btn:hover { color:var(--gold); }
+
+#canvas-hidden { display:none; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     LOADING OVERLAY
+══════════════════════════════════════ -->
+<div id="loading-overlay">
+  <div class="loading-logo">🤖</div>
+  <div class="loading-title">U L T A M A S</div>
+  <div class="loading-sub" id="loading-sub">Loading...</div>
+  <div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div>
+  <div class="loading-error" id="loading-error"></div>
+  <button class="btn-retry" id="btn-retry" onclick="retryLoad()">🔄 Coba Lagi</button>
+</div>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<div class="app-header">
+  <div class="logo">🤖</div>
+  <div class="header-title">
+    <h1>ULTAMAS</h1>
+    <p>Ular Tangga Edukasi Mengolah Sampah</p>
+  </div>
+  <div class="sync-badge local" id="sync-badge">LOCAL</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: MENU
+══════════════════════════════════════ -->
+<div id="screen-menu" class="screen active">
+  <div class="menu-hero">
+    <p>Pilih Kategori Pertanyaan dan jadilah Panglima Pelestari Lingkungan</p>
+    <div class="sheet-info" id="sheet-info">Menghubungkan ke Database Gekaborga</div>
+  </div>
+  <div class="category-grid" id="category-grid"></div>
+
+  <div class="action-btns">
+    <button class="btn-sync" id="btn-sync" onclick="syncData()">
+      <span class="sync-spinner">🔄</span> Sinkronisasi Soal
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: QUIZ
+══════════════════════════════════════ -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-header">
+    <button class="btn-back" onclick="goMenu()">←</button>
+    <div class="quiz-meta">
+      <div class="quiz-cat-lbl" id="q-cat">-</div>
+      <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+    </div>
+    <div class="quiz-counter" id="q-counter">1/10</div>
+  </div>
+
+  <div class="question-card">
+    <div class="q-number" id="q-num">Soal 1</div>
+    <div class="q-text"  id="q-text">Memuat...</div>
+  </div>
+
+  <div class="options-list" id="options-list"></div>
+
+  <div class="feedback-card" id="feedback-card">
+    <div class="fb-head" id="fb-head"></div>
+    <div class="fb-text" id="fb-text"></div>
+  </div>
+
+  <button class="btn-primary btn-next" id="btn-next" onclick="nextQ()">
+    Pertanyaan Berikutnya ➜
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCREEN: AWARD
+══════════════════════════════════════ -->
+<div id="screen-award" class="screen">
+  <div class="quiz-header">
+    <button class="btn-back" onclick="goMenu()">←</button>
+    <div class="quiz-meta">
+      <div class="quiz-cat-lbl">🏆 Form Penghargaan</div>
+    </div>
+  </div>
+
+  <div class="award-card-form">
+    <h2>🥇 Kartu Pemenang</h2>
+    <p>Isi data dan foto selfie untuk membuat kartu penghargaan</p>
+
+    <div class="form-group">
+      <label>👑 Nama Pemenang</label>
+      <input type="text" id="inp-winner" placeholder="Nama pemenang..." />
+    </div>
+    <div class="form-group">
+      <label>⚔️ Nama Lawan</label>
+      <input type="text" id="inp-opponent" placeholder="Nama lawan..." />
+    </div>
+    <div class="form-group">
+      <label>📸 Selfie Pemenang</label>
+      <div class="camera-area">
+        <div id="cam-ph">
+          <div class="cam-hint">Ambil foto selfie atau pilih foto di galerimu dengan rasio 1:1</div>
+          <button class="btn-sm" onclick="openCam()">📷 Buka Kamera</button>
+          <button class="btn-sm alt" onclick="pickFile()">🖼️ Pilih Foto</button>
+          <input type="file" id="file-input" accept="image/*" style="display:none" onchange="fileChosen(this)" />
+        </div>
+        <video id="video-el" autoplay playsinline></video>
+        <div id="cam-ctrl" style="display:none;margin-top:10px;">
+          <button class="btn-sm" onclick="snapPhoto()">📸 Ambil Foto</button>
+          <button class="btn-sm alt" onclick="closeCam()">✕ Batal</button>
+        </div>
+        <canvas id="canvas-hidden" width="400" height="400"></canvas>
+        <img id="photo-el" src="" alt="Selfie" />
+        <div id="retake-area" style="display:none;margin-top:8px;">
+          <button class="btn-sm alt" onclick="retakePhoto()">🔄 Foto Ulang</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="makeCard()" style="margin-top:8px;">
+      Buat Kartu Penghargaan
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MODAL: KARTU PEMENANG
+══════════════════════════════════════ -->
+<div class="modal-bg" id="modal-award">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <!-- Kartu Portrait -->
+    <div id="award-card">
+      <div class="ac-stripe"></div>
+      <div class="ac-top"><span class="ac-icon">🤖</span></div>
+      <div class="ac-heading">SERTIFIKAT PENGHARGAAN<br>PELESTARI LINGKUNGAN</div>
+      <div class="ac-sub">Penghargaan Ular Tangga Edukasi Mengolah Sampah</div>
+      <div class="ac-divider"></div>
+      <div class="ac-photo-wrap" id="ac-photo-wrap">
+        <div class="ac-photo-placeholder">🤳</div>
+      </div>
+      <div class="ac-awarded">Penghargaan Ini Diberikan Kepada</div>
+      <div class="ac-winner"  id="ac-winner">Nama Pemenang</div>
+      <div class="ac-vs">Mengalahkan</div>
+      <div class="ac-loser"   id="ac-loser">Nama Lawan</div>
+      <div class="ac-badge">
+        <div class="ac-badge-title">🏆 Panglima Pelestari Lingkungan</div>
+        <div class="ac-badge-sub">Bhumi Handayani</div>
+      </div>
+      <div class="ac-date" id="ac-date"></div>
+      <div class="ac-stripe" style="margin-top:16px;"></div>
+    </div>
+
+    <!-- Canvas Pratinjau Kartu (untuk simpan di HP) -->
+    <div class="canvas-preview-wrap" id="canvas-preview-wrap" style="display:none;">
+      <div class="canvas-hint">
+        <span class="canvas-hint-icon">👆</span>
+        <span><strong>Tekan lama gambar di bawah → Simpan Foto</strong><br>untuk menyimpan ke galeri HP kamu</span>
+      </div>
+      <canvas id="card-canvas" style="width:100%;border-radius:16px;display:block;box-shadow:0 0 40px rgba(212,168,67,0.4);"></canvas>
+    </div>
+
+    <!-- Tombol Share -->
+    <div class="share-section">
+      <div class="share-grid">
+        <button class="share-btn s-save" onclick="saveCard()"><span class="si">Simpan Gambar</span>Bagikan ke Seluruh Media Sosialmu</button>
+        <!-- <button class="share-btn s-wast" onclick="shareWAStory()"><span class="si">📲</span>WA Story</button>
+        <button class="share-btn s-wach" onclick="shareWAChat()"><span class="si">💬</span>WA Chat</button>
+        <button class="share-btn s-soc"  onclick="shareSocial()"><span class="si">📱</span>Media Sosial</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     BOTTOM NAV
+══════════════════════════════════════ -->
+<nav class="bottom-nav">
+  <button class="nav-btn active" id="nav-home"  onclick="goMenu()">
+    <span class="ni">🏠</span>Menu
+  </button>
+  <button class="nav-btn" id="nav-quiz"  onclick="startQuiz()">
+    <span class="ni">🎲</span>Acak Pertanyaan
+  </button>
+  <button class="nav-btn" id="btn-sync" onclick="syncData()">
+    <span class="ni">🔄</span> Sinkronisasi Soal
+  </button>
+  <button class="nav-btn" id="nav-award" onclick="showAward()">
+    <span class="ni">🏆</span>Penghargaan
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+/* ═══════════════════════════════════════════════════════════
+   ⚙️  KONFIGURASI
+   Ganti WEB_APP_URL dengan URL Apps Script kamu setelah deploy
+═══════════════════════════════════════════════════════════ */
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbw2dmVxKrsnG3kvyO6Ed5mm7zl9eFDFf9EmLFtCnDOPUg9m4Ar9MaZoEZJipjHp5nynDg/exec';
+
+/* ─── Label & ikon per sheet ─── */
+const CAT_META = {
+  konsep      : { label:'Konsep Dasar',      icon:'📖' },
+  pengolahan  : { label:'Pengolahan Sampah', icon:'♻️' },
+  BankSampah  : { label:'Bank Sampah',       icon:'🏦' },
+  Pengomposan : { label:'Pengomposan',        icon:'🌱' }
+};
+
+/* ─── Fallback data lokal (dipakai jika offline / API gagal) ─── */
+const FALLBACK_DB = {"konsep":[{"no":1,"soal":"Paradigma lama pengelolaan sampah yang harus diubah adalah...","a":"Pilah-kumpul-jual","b":"Olah-manfaat-daur","c":"Kumpul-angkut-buang","d":"Pilah-olah-kompos","e":"Beli-pakai-buang","kunci":"C","penjelasan":"Paradigma lama 'kumpul-angkut-buang' harus diubah menjadi 'pilah-kumpul-jual'. Artinya, sampah bukan sesuatu yang harus dibuang, tapi bisa jadi sumber penghasilan!"},{"no":2,"soal":"Apa yang dimaksud dengan 'sampah residu' ?","a":"Sampah yang bisa didaur ulang","b":"Sampah sisa makanan yang membusuk","c":"Sampah yang tidak dapat diolah lebih lanjut dan harus dibawa ke TPA","d":"Sampah B3 dari industri","e":"Sampah daun dan ranting","kunci":"C","penjelasan":"Sampah residu adalah sampah yang tidak bisa diolah atau didaur ulang, contohnya tisu bekas, popok bekas, dan kertas minyak bekas. Inilah satu-satunya jenis sampah yang seharusnya berakhir di TPA."},{"no":3,"soal":"Setiap rumah tangga sebaiknya menyiapkan minimal berapa tempat sampah terpisah?","a":"2 tempat sampah","b":"3 tempat sampah","c":"4 tempat sampah","d":"5 tempat sampah","e":"6 tempat sampah","kunci":"D","penjelasan":"Setiap rumah tangga wajib menyiapkan minimal 5 tempat sampah: (1) mudah terurai, (2) dapat digunakan kembali, (3) dapat didaur ulang, (4) B3/Limbah B3, dan (5) residu."},{"no":4,"soal":"Manakah contoh yang termasuk 'sampah yang dapat digunakan kembali' (reuse)?","a":"Kardus bekas","b":"Plastik kresek","c":"Botol kaca kecap yang masih utuh","d":"Kaleng minuman penyok","e":"Kertas koran bekas","kunci":"C","penjelasan":"Sampah yang dapat digunakan kembali (reuse) adalah yang bisa dimanfaatkan tanpa proses pengolahan, contohnya botol kaca dari kemasan produk tertentu seperti botol kecap atau botol sirup."},{"no":5,"soal":"Manakah yang bukan termasuk contoh Sampah B3 rumah tangga?","a":"Kemasan obat serangga","b":"Obat-obatan kedaluarsa","c":"Peralatan elektronik bekas","d":"Daun kering di halaman","e":"Baterai bekas","kunci":"D","penjelasan":"Daun kering adalah sampah yang mudah terurai oleh alam (organik), bukan B3. Sampah B3 rumah tangga meliputi kemasan obat serangga, obat kedaluarsa, elektronik bekas, dan baterai bekas."},{"no":6,"soal":"Konsep 3R dalam pengelolaan sampah terdiri dari...","a":"Recycle, Reuse, Reduce","b":"Remove, Repack, Recycle","c":"Reject, Reduce, Reuse","d":"Reduce, Reuse, Recycle","e":"Recover, Renew, Recycle","kunci":"D","penjelasan":"Konsep 3R adalah Reduce (mengurangi), Reuse (menggunakan kembali), dan Recycle (daur ulang). Urutan ini penting: prioritas utama adalah mengurangi sampah sejak awal!"},{"no":7,"soal":"Apa yang dimaksud dengan 'pengelolaan sampah berbasis sumber'?","a":"Sampah dikelola oleh pemerintah dari sumber APBN","b":"Sampah dikelola langsung di tempat asalnya sebelum dibuang ke TPA","c":"Sampah dikumpulkan dari berbagai sumber ke satu TPA besar","d":"Sumber daya alam digunakan untuk membakar sampah","e":"Sampah diolah menggunakan energi surya","kunci":"B","penjelasan":"Pengelolaan sampah berbasis sumber berarti setiap orang atau lembaga mengelola sampah di tempat asalnya—rumah tangga, sekolah, pasar, dll—sehingga hanya residu yang berakhir di TPA."},{"no":8,"soal":"Manakah tindakan yang paling tepat mencerminkan prinsip 'Reduce'?","a":"Membawa botol minum sendiri ke sekolah untuk menghindari beli air mineral plastik","b":"Memilah sampah plastik di rumah","c":"Mendaur ulang kertas bekas menjadi kerajinan","d":"Menjual sampah ke bank sampah","e":"Membuat kompos dari sisa makanan","kunci":"A","penjelasan":"Reduce berarti mengurangi timbulan sampah sejak awal. Membawa botol sendiri adalah contoh nyata: tidak menghasilkan sampah plastik botol minuman sama sekali!"},{"no":9,"soal":"Siapa yang bertanggung jawab mengelola sampah B3 dari rumah tangga?","a":"Setiap individu membuang sendiri ke sungai","b":"Pemerintah Kabupaten/Kota","c":"Petugas bank sampah","d":"Pengelola TPS 3R desa","e":"RT/RW setempat","kunci":"B","penjelasan":"Sampah B3 dan Limbah B3 dari rumah tangga dikumpulkan dalam tempat sampah khusus dan akan dikelola oleh Pemerintah Kabupaten/Kota yang memiliki fasilitas penanganan khusus."},{"no":10,"soal":"Manakah yang termasuk Sampah Sejenis Sampah Rumah Tangga (SSSRT)?","a":"Sampah dari dapur rumah pribadi","b":"Sampah dari kebun rumah tangga kecil","c":"Sampah dari hotel/villa/restoran","d":"Limbah industri berat","e":"Limbah medis rumah sakit","kunci":"C","penjelasan":"SSSRT berasal dari kawasan/fasilitas termasuk hotel, villa, pondok wisata, restoran, pasar, sekolah, perkantoran, pelabuhan, dan tempat ibadah—bukan dari rumah pribadi."},{"no":11,"soal":"Apa tujuan utama dari pendekatan pengelolaan sampah berbasis sumber?","a":"Memperbanyak jumlah TPA di setiap kabupaten","b":"Memberi kewenangan kepada Desa Adat dan Desa/Kelurahan untuk mengelola sampah secara mandiri","c":"Meningkatkan kapasitas truk pengangkut sampah","d":"Mengurangi jumlah petugas kebersihan","e":"Memindahkan TPA ke luar pulau","kunci":"B","penjelasan":"Pendekatan ini memberi wewenang kepada Desa Adat dan Desa/Kelurahan untuk mengelola sampah secara mandiri, sehingga hanya residu yang perlu diangkut ke TPA."},{"no":12,"soal":"Manakah contoh tindakan 'Reuse' dalam kehidupan sehari-hari pelajar?","a":"Memilah sampah plastik dan kertas","b":"Menggunakan kertas bekas sebagai buku catatan baru","c":"Membuat kompos dari sampah makanan","d":"Menjual kardus ke bank sampah","e":"Tidak membuang sampah ke sungai","kunci":"B","penjelasan":"Reuse berarti menggunakan kembali barang tanpa proses pengolahan. Menggunakan kertas bekas sebagai catatan adalah contoh sederhana yang bisa langsung dipraktikkan siswa!"},{"no":13,"soal":"Menurut pedoman, apa yang harus dilakukan rumah tangga yang memiliki lahan terbatas untuk mengolah sampah organik?","a":"Membuang sampah organik langsung ke TPA","b":"Menggunakan sistem takakura, biopori, atau komposter ayun","c":"Meminta petugas desa mengambil setiap hari","d":"Membakar sampah organik di halaman","e":"Mencampurkan dengan sampah residu","kunci":"B","penjelasan":"Untuk rumah tangga dengan lahan terbatas, pedoman merekomendasikan sistem takakura, biopori, atau komposter ayun—semua bisa dilakukan di ruang kecil bahkan di apartemen!"},{"no":14,"soal":"Apa perbedaan utama antara 'sampah yang dapat didaur ulang' dengan 'sampah yang dapat digunakan kembali'?","a":"Tidak ada perbedaan, keduanya sama","b":"Sampah daur ulang memerlukan proses pengolahan terlebih dahulu, sedangkan reuse langsung digunakan tanpa proses","c":"Sampah daur ulang lebih berharga secara ekonomi","d":"Sampah reuse hanya berasal dari plastik","e":"Sampah daur ulang hanya berasal dari kertas","kunci":"B","penjelasan":"Sampah yang dapat digunakan kembali (reuse) langsung dipakai tanpa pengolahan, misal botol kaca kecap. Sampah daur ulang memerlukan proses terlebih dahulu, misal kardus diolah menjadi kertas baru."},{"no":15,"soal":"Siapa yang wajib memilah sampah ?","a":"Hanya petugas kebersihan desa","b":"Hanya pengelola TPS 3R","c":"Setiap orang dalam rumah tangga sebagai penghasil sampah","d":"Hanya warga yang memiliki bank sampah","e":"Hanya pengelola kawasan komersial","kunci":"C","penjelasan":"Pedoman menegaskan: 'siapa yang menghasilkan sampah harus bertanggung jawab melakukan pemilahan sampah.' Artinya, setiap orang—termasuk pelajar—punya kewajiban memilah sampah!"},{"no":16,"soal":"Apakah yang dimaksud dengan 'FPS' dalam pedoman pengelolaan sampah?","a":"Fasilitas Pembuangan Sampah","b":"Fasilitas Penampungan Sementara","c":"Fasilitas Pengolahan Sampah","d":"Forum Pengelola Sampah","e":"Frekuensi Pengangkutan Sampah","kunci":"C","penjelasan":"FPS adalah Fasilitas Penampungan Sementara—tempat sampah dikumpulkan sebelum diangkut ke tempat pengolahan atau TPA. Istilah ini sering muncul dalam alur pengelolaan sampah."},{"no":17,"soal":"Apa manfaat utama mengubah paradigma dari 'kumpul-angkut-buang' menjadi 'pilah-kumpul-jual'?","a":"Mengurangi biaya gaji petugas kebersihan","b":"Sampah bisa menjadi sumber penghasilan dan mengurangi beban TPA sekaligus","c":"Mengurangi penggunaan kendaraan pengangkut","d":"Menambah jumlah TPA baru","e":"Mempercepat proses pembusukan sampah","kunci":"B","penjelasan":"Paradigma baru 'pilah-kumpul-jual' mengubah cara pandang kita: sampah bukan beban, tapi sumber daya! Hasilnya ganda: TPA tidak cepat penuh dan masyarakat bisa mendapat penghasilan dari sampah."},{"no":18,"soal":"Manakah yang merupakan contoh sampah yang mudah terurai oleh alam?","a":"Botol plastik mineral","b":"Baterai bekas","c":"Sisa upakara (sesaji) yang terdiri dari daun dan bunga","d":"Kemasan styrofoam","e":"Kaleng minuman","kunci":"C","penjelasan":"Sisa upakara (sesaji) yang terdiri dari daun, bunga, dan bahan alami termasuk sampah yang mudah terurai oleh alam karena dapat diurai oleh mikroorganisme. Bahkan bisa diolah menjadi kompos!"},{"no":19,"soal":"Manakah pernyataan yang paling tepat menggambarkan tujuan pengelolaan sampah berbasis sumber?","a":"Memaksimalkan volume sampah yang masuk ke TPA agar efisien","b":"Seminimal mungkin sampah residu yang perlu dikelola ke TPA","c":"Menghilangkan semua jenis sampah dari permukaan bumi","d":"Memindahkan TPA ke lokasi yang lebih terpencil","e":"Menjual seluruh sampah ke luar negeri","kunci":"B","penjelasan":"Tujuannya adalah memastikan sampah terkelola habis di sumber (diolah, didaur ulang, dikompos), sehingga seminimal mungkin—hanya residu—yang perlu dibawa ke TPA. Semakin sedikit residu = TPA semakin panjang umurnya!"},{"no":20,"soal":"Sebagai pelajar, langkah paling mudah yang bisa dilakukan sekarang untuk mendukung pengelolaan sampah berbasis sumber adalah...","a":"Menunggu pemerintah membangun TPS 3R di sekolah","b":"Mulai memilah sampah di rumah dan membawa tempat minum sendiri ke sekolah","c":"Membeli produk daur ulang sebanyak-banyaknya","d":"Memprotes kebijakan pemerintah tentang TPA","e":"Membakar sampah agar cepat berkurang","kunci":"B","penjelasan":"Langkah terkecil yang paling berdampak: mulai memilah sampah di rumah dan kurangi sampah plastik dengan membawa tempat minum/makan sendiri. Perubahan besar dimulai dari kebiasaan kecil sehari-hari!"}],"pengolahan":[{"no":1,"soal":"Ke manakah sampah yang mudah terurai oleh alam dari rumah tangga seharusnya dibawa jika tidak bisa dikomposkan secara mandiri?","a":"Langsung ke TPA","b":"Bank Sampah Unit","c":"TPS 3R yang dikelola Desa Adat/Kelurahan","d":"Dibuang ke sungai terdekat","e":"Dikubur di halaman belakang","kunci":"C","penjelasan":"Jika tidak bisa dikomposkan mandiri di rumah, sampah yang mudah terurai diangkut sesuai jadwal dan diolah menjadi kompos di TPS 3R yang dikelola Desa Adat dan/atau Desa/Kelurahan."},{"no":2,"soal":"Dalam mekanisme pengelolaan sampah rumah tangga, ke manakah sampah yang dapat digunakan kembali dan didaur ulang disetor?","a":"TPA Sampah","b":"Bank Sampah sesuai jadwal yang ditentukan","c":"Dibuang bersama sampah residu","d":"Dibakar di halaman","e":"TPS 3R sebagai kompos","kunci":"B","penjelasan":"Sampah yang dapat digunakan kembali dan dapat didaur ulang dikumpulkan dan disetor ke bank sampah sesuai jadwal yang telah ditentukan oleh Desa Adat dan/atau Desa/Kelurahan."},{"no":3,"soal":"Di pasar tradisional, bagaimana pengelolaan sampah sisa makanan/sayuran seharusnya dilakukan?","a":"Dibuang langsung ke sungai karena organik","b":"Diolah menjadi pupuk kompos oleh pengelola pasar atau diangkut ke TPS 3R desa","c":"Dikumpulkan dan dibakar setiap malam","d":"Dicampur dengan sampah plastik lalu dibuang","e":"Disetor ke bank sampah","kunci":"B","penjelasan":"Sampah organik dari pasar diolah menjadi kompos secara mandiri oleh pengelola pasar, atau ditampung sementara lalu diangkut ke TPS 3R desa sesuai jadwal untuk dijadikan pupuk kompos."},{"no":4,"soal":"Hotel dan villa berbeda dalam pengelolaan sampah B3 dibandingkan fasilitas umum. Apa perbedaannya?","a":"Hotel langsung membuang B3 ke TPA","b":"Sampah B3 hotel disimpan di TPS Limbah B3 berizin dan diserahkan ke pengolah/pemanfaat limbah B3 berizin","c":"Hotel tidak menghasilkan sampah B3","d":"Sampah B3 hotel disetor ke bank sampah biasa","e":"Hotel membakar sampah B3 sendiri","kunci":"B","penjelasan":"Karena skala dan jenis limbahnya lebih kompleks (termasuk oli bekas, obat kedaluarsa), hotel/villa menyimpan B3 di TPS Limbah B3 berizin dan menyerahkannya ke pihak pengolah/pemanfaat limbah B3 berizin."},{"no":5,"soal":"Dalam pengelolaan sampah di perkantoran, siapa yang mendorong budaya hidup bersih kepada karyawan?","a":"Pemerintah pusat melalui surat edaran","b":"Petugas kebersihan gedung","c":"Pengelola/manajemen perkantoran","d":"Ketua RT setempat","e":"Dinas Lingkungan Hidup","kunci":"C","penjelasan":"Pengelola perkantoran bertanggung jawab mendorong karyawan dan tamu untuk mewujudkan budaya hidup bersih, antara lain tidak membuang sampah sembarangan dan tidak membakar sampah."},{"no":6,"soal":"Bagaimana sampah B3 dari sekolah (seperti baterai bekas dan cairan sisa laboratorium) seharusnya ditangani?","a":"Dicuci dan dibuang ke tempat sampah biasa","b":"Disetor ke bank sampah unit sekolah","c":"Ditempatkan terpisah lalu disetor ke petugas desa untuk disimpan di TPS 3R, kemudian diangkut ke TPS LB3 Kabupaten","d":"Dibuang ke toilet sekolah","e":"Dicampur dengan sampah organik","kunci":"C","penjelasan":"Sampah B3 sekolah (baterai, lampu, kaleng obat, termometer, cairan lab) ditampung terpisah, disetor ke petugas desa, disimpan sementara di TPS 3R desa, lalu diangkut ke TPS LB3 tingkat Kabupaten."},{"no":7,"soal":"Dalam mekanisme pengelolaan sampah di fasilitas umum (terminal, lapangan, jalan raya), sampah residu diproses bagaimana?","a":"Dibakar langsung di lokasi fasilitas umum","b":"Disimpan sementara di TPS 3R lalu diangkut ke TPA sesuai jadwal","c":"Dibuang ke got/saluran air terdekat","d":"Dibawa langsung ke bank sampah induk","e":"Dikubur di tanah lapang","kunci":"B","penjelasan":"Sampah residu dari fasilitas umum disimpan sementara di TPS 3R, kemudian diangkut ke TPA oleh petugas sampah banjar/desa sesuai jadwal yang telah disepakati."},{"no":8,"soal":"Apa tindakan khusus yang harus dilakukan pengelola tempat ibadah untuk mengurangi sampah plastik?","a":"Membeli kantong plastik biodegradable dalam jumlah besar","b":"Membatasi sarana kegiatan keagamaan yang menggunakan plastik dan penggunaan kemasan plastik pada hidangan keagamaan","c":"Memasang kamera di area ibadah","d":"Meminta sumbangan dari umat untuk beli tempat sampah","e":"Menunjuk satu petugas khusus penjaga sampah","kunci":"B","penjelasan":"Pengelola tempat ibadah diwajibkan: (1) membatasi sarana kegiatan keagamaan yang menggunakan plastik, dan (2) membatasi penggunaan hidangan berkemasan plastik pada setiap acara keagamaan."},{"no":9,"soal":"Mengapa sisa makanan/sampah dapur harus 'ditiriskan' terlebih dahulu sebelum dimasukkan ke komposter?","a":"Agar tidak merusak tampilan komposter","b":"Untuk memisahkan airnya sehingga proses pengomposan lebih optimal dan tidak terlalu basah","c":"Karena airnya beracun","d":"Untuk memudahkan penimbangan di bank sampah","e":"Agar bisa dicampur dengan sampah plastik","kunci":"B","penjelasan":"Sampah sisa makanan yang basah perlu ditiriskan (dipisahkan airnya) sebelum dikomposkan. Ini memastikan kadar air dalam komposter terjaga optimal—tidak terlalu basah yang bisa menyebabkan bau busuk."},{"no":10,"soal":"Langkah pertama yang harus dilakukan sebelum sampah organik dari pasar dikirim ke TPS 3R adalah...","a":"Memilah dan memisahkan sampah organik dari jenis sampah lainnya","b":"Mencampurkan semua jenis sampah agar lebih efisien","c":"Membakar sampah organik agar volumenya berkurang","d":"Mengirimnya langsung tanpa persiapan","e":"Menimbangnya dulu di bank sampah","kunci":"A","penjelasan":"Pemilahan adalah langkah pertama dan paling mendasar! Sampah organik harus dipilah terlebih dahulu dari sampah lainnya sebelum bisa diolah menjadi kompos di TPS 3R."},{"no":11,"soal":"Manakah yang bukan merupakan kewajiban setiap rumah tangga dalam pengelolaan sampah?","a":"Memilah sampah berdasarkan jenisnya","b":"Menyetor sampah daur ulang ke bank sampah","c":"Mengolah sampah organik secara mandiri atau di TPS 3R","d":"Membayar biaya pengolahan TPA langsung ke pemerintah pusat","e":"Menyiapkan tempat sampah untuk menampung residu","kunci":"D","penjelasan":"Kewajiban rumah tangga adalah memilah, menyetor ke bank sampah, mengolah organik, dan menyiapkan tempat residu. Pembayaran ke pemerintah pusat bukan kewajiban yang disebutkan—biaya pengelolaan diatur di tingkat desa."},{"no":12,"soal":"Dalam pengelolaan sampah di sekolah, apa yang bisa dilakukan dengan kompos hasil pengolahan sampah organik?","a":"Dijual ke pabrik pupuk besar","b":"Digunakan sebagai media pembelajaran dan dimanfaatkan di sekolah/perguruan tinggi sendiri","c":"Dibuang kembali ke tempat sampah","d":"Dikirim ke pelabuhan untuk ekspor","e":"Disimpan sebagai cadangan energi","kunci":"B","penjelasan":"Kompos dari sekolah dapat dimanfaatkan sebagai media pembelajaran (berkebun, praktik sains) dan digunakan di sekolah/perguruan tinggi itu sendiri. Edukasi dan praktik berkelanjutan dalam satu paket!"},{"no":13,"soal":"Mengapa pengelolaan sampah B3 di hotel berbeda dari rumah tangga biasa?","a":"Karena hotel lebih kaya sehingga bisa membayar lebih","b":"Karena hotel menghasilkan B3 yang lebih kompleks (oli bekas, obat kedaluarsa, dll) sehingga perlu TPS Limbah B3 berizin dan pihak ketiga berizin","c":"Karena hukum tidak berlaku di kawasan hotel","d":"Karena hotel memiliki insinerator sendiri yang legal","e":"Karena volume sampah hotel lebih kecil","kunci":"B","penjelasan":"Hotel/villa menghasilkan B3 yang lebih beragam dan dalam volume lebih besar (oli bekas, obat kedaluarsa, peralatan klinik). Oleh karena itu mereka wajib menggunakan TPS Limbah B3 berizin dan pihak pengolah B3 berizin."},{"no":14,"soal":"Apa yang dimaksud dengan 'kontainer' dalam konteks pengelolaan sampah sejenis sampah rumah tangga?","a":"Kapal pengangkut sampah antarpulau","b":"Tempat penampungan sementara yang digunakan di kawasan/fasilitas sebelum sampah diangkut","c":"Nama lain dari TPS 3R","d":"Alat pemisah sampah otomatis","e":"Kendaraan khusus pengangkut sampah B3","kunci":"B","penjelasan":"Kontainer dalam konteks ini adalah tempat penampungan sementara (TPS) yang digunakan di kawasan komersial, industri, atau fasilitas umum untuk menampung sampah yang sudah dipilah sebelum diangkut lebih lanjut."},{"no":15,"soal":"Pada mekanisme pengelolaan sampah di fasilitas umum, ke manakah sampah yang dapat didaur ulang dibawa setelah dikumpulkan di TPS 3R?","a":"Langsung dibakar di TPS 3R","b":"Dikubur di tanah di sekitar fasilitas umum","c":"Dibawa ke bank sampah sesuai jadwal yang ditentukan","d":"Dikirim ke TPA tingkat provinsi","e":"Dicampur dengan sampah residu","kunci":"C","penjelasan":"Sampah daur ulang dari fasilitas umum dikumpulkan di TPS 3R untuk disimpan sementara, kemudian dibawa ke bank sampah sesuai jadwal yang telah ditentukan."},{"no":16,"soal":"Manakah pernyataan yang benar tentang kewajiban pengelola tempat ibadah keagamaan?","a":"Pengelola tempat ibadah bebas dari kewajiban pengelolaan sampah","b":"Pengelola hanya wajib mengumpulkan sampah, tidak perlu memilah","c":"Pengelola wajib mengelola sampah termasuk memilah, menyetor ke bank sampah, dan mengolah organik","d":"Pengelola hanya perlu membayar iuran sampah ke desa","e":"Pengelola menyerahkan semua tanggung jawab ke TPA","kunci":"C","penjelasan":"Menurut tabel jadwal pengangkutan sampah, sampah spesifik (B3) dijadwalkan diangkut ke TPS 3R pada Hari Jumat. Jadwal yang teratur memudahkan pengelolaan dan pengurangan risiko bahaya."},{"no":17,"soal":"Dalam konteks pengelolaan sampah berbasis sumber, apa peran 'generasi muda'?","a":"Hanya sebagai pengumpul sampah di jalanan","b":"Dijadikan edukator dan fasilitator/pendamping pengelolaan sampah di setiap banjar","c":"Menggantikan petugas kebersihan formal","d":"Membuat aplikasi digital pengelolaan sampah","e":"Mengawasi kerja TPA","kunci":"B","penjelasan":"Pedoman secara eksplisit menyebutkan: 'Menyiapkan SDM dengan cara menjadikan generasi muda sebagai edukator dan membentuk tim sebagai fasilitator/pendamping setiap banjar.' Generasi muda adalah agen perubahan!"},{"no":18,"soal":"Apa yang seharusnya dilakukan pengelola kawasan permukiman (perumahan/apartemen) terhadap sampah plastik yang bisa didaur ulang?","a":"Membuangnya ke got agar terbawa air hujan","b":"Memilah, mengumpulkan, dan menyetornya ke bank sampah sesuai jadwal","c":"Membakarnya di tempat pembakaran komunal","d":"Mencampurnya dengan sampah organik agar mudah terurai","e":"Mengirimnya langsung ke pabrik daur ulang tanpa melalui bank sampah","kunci":"B","penjelasan":"Sampah yang dapat didaur ulang di kawasan permukiman harus dipilah, dikumpulkan dalam wadah sesuai jenisnya, dan disetor ke bank sampah sesuai jadwal yang telah ditetapkan oleh Desa Adat/Kelurahan."},{"no":19,"soal":"Apa yang dimaksud dengan 'ritasi' dalam konteks pengangkutan sampah?","a":"Jenis kendaraan pengangkut sampah khusus","b":"Jumlah/frekuensi perjalanan pengangkutan dalam satu periode waktu","c":"Nama program pemilahan sampah nasional","d":"Jenis sampah yang diangkut khusus pada hari tertentu","e":"Tarif iuran sampah per rumah tangga","kunci":"B","penjelasan":"Ritasi mengacu pada jumlah atau frekuensi perjalanan pengangkutan sampah dalam satu periode. Jadwal dan ritasi pengangkutan disesuaikan dengan jumlah sampah yang dihasilkan di suatu wilayah."},{"no":20,"soal":"Sarana pengangkutan mana yang paling tepat digunakan untuk menjangkau perkampungan atau komplek perumahan dengan jalan sempit?","a":"Truk bak terbuka berkapasitas besar","b":"Kapal tongkang","c":"Motor roda tiga atau mobil pick up","d":"Kereta api barang","e":"Helikopter pengangkut sampah","kunci":"C","penjelasan":"Motor roda tiga dengan bentuknya yang kecil sangat efektif menjangkau jalan atau perkampungan sempit. Mobil pick up juga efektif karena mampu melewati jalan sempit dengan kapasitas 1-2 m³."}],"BankSampah":[{"no":1,"soal":"Apa definisi Bank Sampah menurut PermenLH Nomor 13 Tahun 2012?","a":"Lembaga keuangan khusus untuk pinjaman modal usaha daur ulang","b":"Tempat pemilahan dan pengumpulan sampah yang dapat didaur ulang dan/atau diguna ulang yang memiliki nilai ekonomi","c":"Gudang penyimpanan sampah B3 berlisensi","d":"Pasar khusus jual-beli sampah antar daerah","e":"Unit pelaksana teknis TPA tingkat desa","kunci":"B","penjelasan":"Berdasarkan PermenLH No. 13 Tahun 2012, Bank Sampah adalah tempat pemilahan dan pengumpulan sampah yang dapat didaur ulang dan/atau diguna ulang yang memiliki nilai ekonomi. Anggotanya menabung sampah dan mendapat uang!"},{"no":2,"soal":"Apa yang membuat Bank Sampah mirip dengan bank konvensional?","a":"Sama-sama memberikan pinjaman uang","b":"Anggota/nasabah mendapat buku rekening dan menyetor sampah yang nilainya masuk ke rekening","c":"Diawasi oleh Bank Indonesia","d":"Memiliki bunga tabungan yang kompetitif","e":"Menyediakan layanan ATM","kunci":"B","penjelasan":"Bank Sampah mengadopsi konsep perbankan: anggota memiliki buku rekening. Saat menyetor sampah, sampah ditimbang dan ditaksir nilainya, lalu nilai uangnya dimasukkan ke rekening nasabah. Menabung, tapi dengan sampah!"},{"no":3,"soal":"Apa fungsi Bank Sampah sebagai media edukasi?","a":"Mengajarkan cara membuat pinjaman bank kepada anak-anak","b":"Sebagai media edukasi/pelajaran bagi anak-anak usia dini tentang cara memelihara lingkungan","c":"Melatih anak-anak menjadi pedagang sampah profesional","d":"Mengajarkan akuntansi dasar kepada ibu rumah tangga","e":"Melatih petugas kebersihan profesional","kunci":"B","penjelasan":"Salah satu fungsi Bank Sampah adalah menjadi media edukasi, khususnya mengajarkan anak-anak usia dini tentang pentingnya memelihara lingkungan. Belajar sambil berbuat nyata!"},{"no":4,"soal":"Manakah yang bukan merupakan alat operasional utama Bank Sampah?","a":"Timbangan untuk menimbang sampah","b":"Karung berlabel untuk menyimpan sampah sesuai jenisnya","c":"Buku tabungan nasabah","d":"Mesin incinerator untuk membakar sampah","e":"Buku kas dan administrasi","kunci":"D","penjelasan":"Alat operasional utama Bank Sampah adalah timbangan, karung berlabel per jenis sampah, dan administrasi (buku tabungan, buku rekap, buku kas). Mesin incinerator (pembakar) bukan alat Bank Sampah!"},{"no":5,"soal":"Urutan mekanisme sistem Bank Sampah yang benar adalah...","a":"Penimbangan → Penyetoran → Pemilahan → Pencatatan","b":"Pemilahan → Penyetoran → Penimbangan → Pencatatan → Masuk buku tabungan","c":"Penyetoran → Pemilahan → Pencatatan → Penimbangan","d":"Pencatatan → Penimbangan → Pemilahan → Penyetoran","e":"Penimbangan → Pencatatan → Penyetoran → Pemilahan","kunci":"B","penjelasan":"Urutan yang benar: (1) Pemilahan skala rumah tangga, (2) Penyetoran ke bank sampah, (3) Penimbangan, (4) Pencatatan, (5) Hasil masuk ke buku tabungan atau ditukarkan dengan barang."},{"no":6,"soal":"Apa perbedaan antara plastik PET (polyethylene terephthalate) dan HDPE (high density polyethylene) dalam pemilahan sampah?","a":"Tidak ada perbedaan, keduanya sama di bank sampah","b":"PET biasanya untuk botol minuman/kemasan makanan, HDPE untuk botol sampo, jerigen, dan produk perawatan","c":"PET lebih berat dari HDPE","d":"HDPE hanya berwarna putih, PET hanya berwarna bening","e":"Keduanya tidak memiliki nilai jual","kunci":"B","penjelasan":"PET/PETE (kode 1) umumnya digunakan untuk botol air mineral, botol minyak goreng. HDPE (kode 2) digunakan untuk botol sampo, bedak bayi, jerigen. Pemilahan yang tepat meningkatkan nilai jual!"},{"no":7,"soal":"Apa yang dimaksud dengan TPS 3R?","a":"Tempat Pembuangan Sampah 3 Rantai","b":"Tempat Pengolahan Sampah dengan Prinsip Reduce, Reuse, Recycle","c":"Tempat Penyimpanan Sementara 3 Ruangan","d":"Tempat Pengumpulan Sampah 3 Regional","e":"Tempat Penampungan Sementara 3 Hari","kunci":"B","penjelasan":"TPS 3R adalah Tempat Pengolahan Sampah dengan Prinsip 3R (Reduce-mengurangi, Reuse-menggunakan kembali, Recycle-daur ulang). Ini adalah fasilitas pengolahan sampah skala kawasan tingkat desa."},{"no":8,"soal":"Manakah yang bukan merupakan manfaat TPS 3R?","a":"Menjaga dan meningkatkan kesehatan masyarakat sekitar","b":"Meringankan beban TPA","c":"Melindungi kualitas air sungai dari tumpukan sampah","d":"Menggantikan peran bank sampah sepenuhnya di tingkat desa","e":"Melindungi kualitas tanah dari pencemaran","kunci":"D","penjelasan":"TPS 3R tidak menggantikan bank sampah—keduanya saling melengkapi. TPS 3R fokus pada pengolahan (terutama kompos), sementara bank sampah fokus pada pengumpulan dan penjualan sampah daur ulang."},{"no":9,"soal":"Berapa jarak maksimal yang disarankan antara TPS 3R dengan daerah pelayanannya?","a":"500 meter","b":"1 kilometer","c":"2 kilometer","d":"3 kilometer","e":"5 kilometer","kunci":"B","penjelasan":"TPS 3R sebaiknya ditempatkan sedekat mungkin dengan daerah pelayanan dalam radius tidak lebih dari 1 km. Ini meminimalkan biaya dan waktu pengangkutan sampah dari sumber ke TPS 3R."},{"no":10,"soal":"Apa yang membedakan prinsip pembangunan TPS 3R dari TPA biasa?","a":"TPS 3R lebih besar dan lebih modern dari TPA","b":"TPS 3R fokus pada mengurangi beban TPA melalui pengolahan, bukan membuang","c":"TPS 3R adalah versi kecil TPA yang lebih dekat ke pemukiman","d":"TPS 3R dioperasikan oleh swasta, TPA oleh pemerintah","e":"TPS 3R hanya untuk sampah anorganik","kunci":"B","penjelasan":"Prinsip TPS 3R adalah mengurangi beban sampah yang akan diolah di TPA. Produk pengolahan (kompos, daur ulang) adalah bonus, tapi tujuan utamanya memastikan hanya residu yang ke TPA."},{"no":11,"soal":"Fasilitas apa yang WAJIB ada di dalam bangunan TPS 3R?","a":"Kolam renang dan area bermain anak","b":"Area penerimaan, pemilahan, pengolahan organik, pencacah, pengomposan, gudang, kantor, dan sarana air bersih","c":"Minimarket dan ruang pertemuan warga","d":"Laboratorium analisis kimia","e":"Showroom produk daur ulang","kunci":"B","penjelasan":"TPS 3R wajib memiliki: area penerimaan/dropping, area pemilahan, pengolahan organik, pencacah mesin, pengomposan, pematangan kompos, gudang produk, kantor, serta sarana air bersih dan sanitasi."},{"no":12,"soal":"Apa yang dimaksud dengan 'zona penyangga' (buffer zone) di TPS 3R?","a":"Area parkir untuk truk sampah","b":"Ruang pemisah/penyekat yang mencegah TPS 3R mengganggu estetika dan lalu lintas sekitarnya","c":"Tempat penyimpanan sampah B3 khusus","d":"Area bermain anak di sekitar TPS 3R","e":"Tempat pertemuan warga untuk sosialisasi","kunci":"B","penjelasan":"Buffer zone atau zona penyangga adalah ruang pemisah yang memastikan TPS 3R tidak mengganggu estetika lingkungan sekitar dan tidak menghalangi lalu lintas. Ini salah satu persyaratan wajib TPS 3R."},{"no":13,"soal":"Tahapan pertama dalam pembangunan TPS 3R adalah...","a":"Langsung membangun fisik gedung TPS 3R","b":"Persiapan: sosialisasi kepada seluruh pemangku kepentingan dan membentuk komunitas","c":"Membeli mesin pengolah sampah terlebih dahulu","d":"Mengajukan permohonan dana ke pemerintah pusat","e":"Menunjuk kontraktor bangunan","kunci":"A","penjelasan":"Tahap pertama adalah persiapan: melakukan sosialisasi penyelenggaraan TPS 3R kepada seluruh pemangku kepentingan dengan mengadakan pertemuan warga untuk membentuk komunitas yang paham pentingnya pengelolaan sampah."},{"no":14,"soal":"Apa tujuan dilakukannya 'kajian' sebelum membangun TPS 3R?","a":"Untuk menentukan harga tanah lokasi TPS 3R","b":"Mengetahui komposisi dan volume timbulan sampah, kondisi sosial, penetapan lokasi, dan pemilihan teknologi yang tepat","c":"Mencari investor swasta untuk membiayai pembangunan","d":"Menentukan tarif iuran sampah warga","e":"Memilih desain arsitektur yang menarik","kunci":"B","penjelasan":"Kajian bertujuan mengetahui komposisi dan volume sampah, kondisi sosial masyarakat, untuk penetapan lokasi yang tepat, pemilihan teknologi yang sesuai, dan sebagai tolok ukur kinerja program."},{"no":15,"soal":"Sampah plastik kode 6 (PS/Polystyrene) yang dikenal sebagai styrofoam termasuk kategori apa di bank sampah?","a":"Sampah yang mudah terurai oleh alam","b":"Sampah B3 yang tidak boleh didaur ulang","c":"Sampah yang dapat didaur ulang dengan pemilahan spesifik (PS Keras, PS Kristal, PS Lainnya)","d":"Sampah residu yang langsung ke TPA","e":"Sampah yang bisa langsung digunakan kembali","kunci":"C","penjelasan":"Styrofoam/PS (kode 6) termasuk sampah yang dapat didaur ulang. Di bank sampah, dipilah menjadi PS Keras Campur, PS Kristal Bening, PS & AS Keras Warna, dan PS Lainnya. Semakin detail pemilahan, semakin tinggi nilainya!"},{"no":16,"soal":"Mengapa pemilahan sampah plastik yang lebih detail (misalnya membedakan PET bening A dan PET bening B) menguntungkan nasabah bank sampah?","a":"Karena pemilahan detail tidak berpengaruh pada nilai","b":"Karena pemilahan yang lebih detail meningkatkan nilai jual sampah—masyarakat mendapat harga yang lebih baik","c":"Karena hanya bank sampah induk yang bisa menerima sampah terpilah detail","d":"Karena sampah yang dipilah detail lebih mudah dibakar","e":"Karena aturan hukum mewajibkan pemilahan sangat detail","kunci":"B","penjelasan":"Semakin detail pemilahan sampah plastik, semakin tinggi nilai jualnya! Bank sampah dan pengepul memberikan harga lebih baik untuk sampah yang sudah dipilah dengan benar berdasarkan jenis spesifiknya."},{"no":17,"soal":"Apa yang dimaksud dengan 'dropping area' dalam desain TPS 3R?","a":"Area pembuangan sampah akhir","b":"Area penerimaan sampah yang masuk ke TPS 3R dari pengangkut","c":"Area parkir untuk kendaraan besar","d":"Area kantor administrasi","e":"Area pematangan kompos","kunci":"B","penjelasan":"Dropping area atau area penerimaan adalah tempat di TPS 3R di mana sampah yang dibawa oleh kendaraan pengangkut dari sumber-sumber (rumah tangga, pasar, dll.) diturunkan dan diterima untuk diolah lebih lanjut."},{"no":18,"soal":"Manakah pernyataan yang benar tentang wadah penyimpanan residu di TPS 3R?","a":"Harus berupa wadah permanen dari beton yang kuat","b":"Bukan merupakan wadah permanen—hanya penampungan sementara sebelum diangkut ke TPA","c":"Harus berukuran minimal 50 m²","d":"Harus terbuat dari bahan anti karat","e":"Harus tertutup rapat selama 30 hari sebelum diangkut","kunci":"B","penjelasan":"Persyaratan TPS 3R menyatakan bahwa wadah penampung residu/sisa pengolahan di TPS 3R bukan merupakan wadah permanen. Ini penampungan sementara sebelum residu diangkut ke TPA."},{"no":19,"soal":"Kenapa Bank Sampah penting bagi siswa/mahasiswa yang ingin berkontribusi pada lingkungan?","a":"Karena Bank Sampah memberikan beasiswa kepada pelajar","b":"Karena menyetor sampah ke bank sampah adalah cara konkret mengurangi beban TPA sekaligus mendapat penghasilan tambahan","c":"Karena Bank Sampah adalah syarat kelulusan sekolah","d":"Karena pelajar diwajibkan menjadi pengurus Bank Sampah","e":"Karena Bank Sampah hanya bisa didirikan oleh pelajar","kunci":"B","penjelasan":"Bank Sampah memberi kesempatan nyata bagi pelajar: memilah sampah di rumah/kos, menyetornya, dan mendapat nilai ekonomi. Tindakan kecil ini berdampak besar bagi lingkungan sekaligus melatih jiwa kewirausahaan!"},{"no":20,"soal":"Apa yang dimaksud dengan 'Tetrapack' sebagai kategori sampah kertas di bank sampah?","a":"Jenis kertas putih premium untuk printer","b":"Kemasan multilayer (kertas, aluminium, plastik) seperti kemasan susu/jus kotak yang bisa didaur ulang","c":"Kertas karton untuk kemasan elektronik","d":"Jenis kardus bekas yang sangat tebal","e":"Kertas koran edisi khusus","kunci":"B","penjelasan":"Tetrapack adalah kemasan multilayer yang terdiri dari lapisan kertas, aluminium foil, dan plastik—seperti kemasan susu/jus kotak. Meski kompleks, bisa didaur ulang dan memiliki nilai di bank sampah."}],"Pengomposan":[{"no":1,"soal":"Metode Takakura adalah teknik pengomposan yang dikembangkan oleh...","a":"Ilmuwan Indonesia dari Universitas Udayana","b":"Peneliti asal Jepang bernama Koji Takakura","c":"Organisasi lingkungan internasional UNEP","d":"Kementerian Lingkungan Hidup Indonesia","e":"Petani tradisional Bali","kunci":"B","penjelasan":"Metode Takakura dikembangkan oleh peneliti asal Jepang bernama Koji Takakura. Metode ini dirancang sederhana agar bisa diterapkan di rumah tangga manapun, baik di perkotaan dengan lahan sempit maupun di pedesaan."},{"no":2,"soal":"Apa keunggulan utama metode pengomposan Takakura yang membuatnya cocok untuk rumah tinggal di kota?","a":"Menghasilkan kompos paling banyak dari semua metode","b":"Sangat sederhana dan bisa diterapkan di lahan sempit tanpa menimbulkan bau berkat fermentasi dengan mikroba","c":"Prosesnya sangat cepat, hanya 1-2 hari","d":"Tidak memerlukan bahan apapun sebagai starter","e":"Bisa mengolah sampah plastik menjadi kompos","kunci":"B","penjelasan":"Takakura unggul karena: (1) sangat sederhana, (2) bisa diterapkan di lahan terbatas, dan (3) tidak berbau karena menggunakan fermentasi mikroba. Cocok banget untuk anak kos atau rumah di perkotaan!"},{"no":3,"soal":"Fungsi 'bantal sekam' dalam keranjang Takakura adalah...","a":"Sebagai pemberat agar keranjang tidak terbalik","b":"Sebagai tempat berkembangnya mikrobakteri, menyerap air dan bau, serta mengontrol kelembaban","c":"Sebagai lapisan dekoratif agar terlihat menarik","d":"Sebagai filter udara yang mencegah serangga masuk","e":"Sebagai sumber nutrisi tambahan untuk kompos","kunci":"B","penjelasan":"Bantal sekam memiliki tiga fungsi penting: (1) sebagai rumah mikrobakteri yang mempercepat pembusukan organik, (2) menyerap air dan bau sampah, dan (3) mengontrol kelembaban karena sifat sekam yang kering."},{"no":4,"soal":"Apa fungsi kardus yang melapisi keranjang Takakura dari bagian dalam?","a":"Membuat keranjang lebih kuat dan tahan lama","b":"Membatasi gangguan serangga, mengatur kelembaban, dan menyerap/membuang udara & air karena bersifat berpori","c":"Sebagai insulasi agar kompos tetap panas","d":"Mengurangi berat keranjang agar mudah dipindah","e":"Sebagai penanda kapasitas keranjang","kunci":"B","penjelasan":"Kardus berfungsi untuk: (a) membatasi gangguan serangga dari luar, (b) mengatur kelembaban di dalam keranjang, dan (c) bersifat berpori sehingga bisa menyerap sekaligus membuang udara dan air berlebih."},{"no":5,"soal":"Seberapa kecil sampah harus dipotong sebelum dimasukkan ke keranjang Takakura?","a":"Tidak perlu dipotong, masukkan apa adanya","b":"Cukup dipotong menjadi 2 bagian saja","c":"Dipotong kecil-kecil ukuran 2 cm x 2 cm agar lebih cepat terurai","d":"Dihaluskan menjadi bubur sampah terlebih dahulu","e":"Dipotong maksimal 20 cm x 20 cm","kunci":"C","penjelasan":"Sampah harus dipotong kecil-kecil ukuran 2 cm x 2 cm sebelum dimasukkan. Semakin kecil ukuran potongan, semakin cepat terurai. Tulang ikan dipotong kecil, tulang ayam dihancurkan."},{"no":6,"soal":"Bagaimana cara mengetahui bahwa proses pengomposan Takakura berjalan dengan baik?","a":"Warna kompos berubah menjadi hijau cerah","b":"Meletakkan tangan 2 cm dari kompos—jika terasa hangat, proses berjalan baik","c":"Kompos berbau sangat harum seperti bunga","d":"Volume kompos bertambah dua kali lipat","e":"Muncul bunga jamur berwarna putih di permukaan","kunci":"B","penjelasan":"Cara cek sederhana: letakkan tangan sekitar 2 cm dari permukaan kompos. Jika terasa hangat, proses pengomposan berjalan baik. Jika dingin, bisa jadi kompos terlalu kering—tambahkan sedikit air!"},{"no":7,"soal":"Kapan kompos Takakura siap dipanen?","a":"Setelah 1 minggu","b":"Setelah 2 minggu","c":"Setelah 40-60 hari, ditandai warna hitam, tidak berbau, dan tidak becek","d":"Setelah 6 bulan","e":"Setelah 1 tahun","kunci":"C","penjelasan":"Kompos Takakura siap dipanen setelah 40-60 hari pengomposan. Tanda-tandanya: warna hitam seperti tanah, tidak berbau, dan tidak becek (tidak terlalu basah). Jangan lupa cuci tangan setelah membuat kompos!"},{"no":8,"soal":"Berapa bagian isi keranjang Takakura yang dipanen saat kompos sudah penuh?","a":"Seluruh isi keranjang dipanen sekaligus","b":"1/2 bagian dipanen, 1/2 dijadikan starter baru","c":"1/3 bagian dipanen, 2/3 sisanya jadi starter untuk pengolahan berikutnya","d":"3/4 bagian dipanen, 1/4 jadi starter","e":"Hanya lapisan atas saja yang dipanen","kunci":"C","penjelasan":"Saat keranjang penuh, ambil 1/3 isi untuk dipanen (diangin-anginkan selama seminggu), sisanya yang 2/3 digunakan kembali sebagai starter/aktivator untuk pengolahan sampah berikutnya."},{"no":9,"soal":"Bagaimana mengatasi masalah belatung yang muncul dalam keranjang Takakura?","a":"Langsung membuang seluruh isi keranjang","b":"Tambahkan 'pengering' seperti serbuk gergaji, sekam, atau panaskan kembali dengan ragi/EM4, atau taburkan kapur","c":"Semprot dengan insektisida kimia","d":"Tuang air mendidih ke dalam keranjang","e":"Simpan keranjang di dalam lemari es","kunci":"C","penjelasan":"Atasi belatung dengan: (1) tambahkan pengering (sekam/serbuk gergaji) untuk mengeringkan kondisi, (2) hangatkan kembali dengan ragi atau EM4, atau (3) taburkan kapur secara merata. Pilih salah satu cara!"},{"no":10,"soal":"Apa yang membuat metode biopori efektif meski tidak memerlukan lahan luas?","a":"Menggunakan lubang silindris vertikal ke dalam tanah dengan diameter 10 cm","b":"Menggunakan mesin otomatis untuk mengisi lubang","c":"Lubang biopori terisi sampah yang langsung menjadi gas","d":"Proses biopori selesai dalam 24 jam","e":"Tidak memerlukan bahan apapun selain tanah","kunci":"A","penjelasan":"Biopori menggunakan lubang silindris vertikal berdiameter 10 cm sedalam ±100 cm ke dalam tanah. Lubang ini diisi sampah organik dan mikroorganisme tanah akan mengolahnya menjadi kompos secara alami."},{"no":11,"soal":"Mengapa jarak antar lubang biopori disarankan 50-100 cm?","a":"Agar estetika taman tetap terjaga","b":"Agar akar tanaman tidak terganggu","c":"Untuk memastikan setiap lubang bekerja optimal tanpa saling mengganggu proses dekomposisi","d":"Karena aturan standar internasional mewajibkan jarak tersebut","e":"Agar mudah dikontrol dan diisi ulang","kunci":"C","penjelasan":"Jarak 50-100 cm antar lubang biopori memastikan setiap lubang bekerja secara optimal tanpa saling mengganggu. Ini juga memudahkan pemantauan dan pengisian ulang dengan sampah organik baru."},{"no":12,"soal":"Kompos dari lubang biopori sebaiknya dipanen pada waktu...","a":"Setiap minggu tanpa memperhatikan musim","b":"Setiap akhir musim kemarau bersamaan dengan pemeliharaan lubang resapan","c":"Setiap hari sebelum memasukkan sampah baru","d":"Setelah hujan lebat yang mengisi lubang dengan air","e":"Setelah 2 tahun tanpa gangguan","kunci":"B","penjelasan":"Kompos dari lubang biopori dipanen setiap akhir musim kemarau, bersamaan dengan pemeliharaan lubang resapan. Ini memastikan ritme yang teratur dan lubang selalu dalam kondisi optimal."},{"no":13,"soal":"Metode komposter apa yang tepat untuk rumah tangga yang memiliki lahan agak luas?","a":"Hanya metode Takakura","b":"Komposter tanam, biodigester, sistem SOSORT, atau sistem OSOM","c":"Hanya metode biopori","d":"Komposter ayun saja","e":"Tidak ada metode khusus untuk lahan luas","kunci":"B","penjelasan":"Untuk rumah tangga dengan lahan yang agak luas, bisa menggunakan: komposter tanam, biodigester, sistem SOSORT (menggunakan buis beton), sistem OSOM, dan berbagai sistem pengomposan skala lebih besar."},{"no":14,"soal":"Apa yang dimaksud dengan 'SOSORT' dalam pedoman pengomposan?","a":"Sistem Olah Sampah Organik Rumah Tangga menggunakan minimal 2 buah buis beton","b":"Standar Operasional Sampah Organik Regional Terpadu","c":"Sistem Olah Sampah Online Real-Time","d":"Singkatan dari nama peneliti penemu metode","e":"Sistem Operasional Sampah Organik Terjadwal","kunci":"A","penjelasan":"SOSORT adalah Sistem Olah Sampah Organik Rumah Tangga yang menggunakan minimal 2 buah buis beton yang dioperasikan secara bergantian. Keunggulannya: mudah dipindah, tertutup sehingga tidak dijangkau binatang, dan tahan lebih dari 20 tahun!"},{"no":15,"soal":"Mengapa sistem SOSORT menggunakan minimal 2 buis beton?","a":"Karena 1 buis beton tidak cukup kuat untuk menahan sampah","b":"Agar bisa dioperasikan bergantian—satu diisi sampah baru, satu lagi dalam proses pematangan kompos","c":"Karena 2 buis menghasilkan kompos dua kali lebih banyak","d":"Untuk estetika tampilan sistem pengomposan","e":"Karena regulasi desa mewajibkan minimal 2 unit","kunci":"B","penjelasan":"Dua buis beton digunakan secara bergantian: saat buis pertama penuh dan dalam proses pematangan kompos (3 bulan), buis kedua mulai diisi sampah baru. Sistem rotasi ini memastikan pasokan kompos yang berkelanjutan."},{"no":16,"soal":"Metode Open Windrow digunakan untuk pengomposan skala...","a":"Rumah tangga individual dengan lahan sempit","b":"Kawasan (skala besar di tempat terbuka beratap dengan aerasi alami)","c":"Laboratorium penelitian tertutup","d":"Apartemen atau rumah susun","e":"Hanya untuk kawasan industri","kunci":"B","penjelasan":"Open Windrow adalah metode pengomposan skala kawasan di tempat terbuka beratap (bukan ruang tertutup tanpa injeksi udara), dengan aerasi alami. Cocok untuk TPS 3R tingkat desa."},{"no":17,"soal":"Dalam metode Open Windrow, berapa perbandingan antara bahan hijau (N) dan bahan coklat (C)?","a":"Bahan hijau 70% : bahan coklat 30%","b":"Bahan hijau 50% : bahan coklat 50%","c":"Bahan hijau 30% : bahan coklat 70%","d":"Bahan hijau 80% : bahan coklat 20%","e":"Hanya bahan hijau saja, tanpa bahan coklat","kunci":"B","penjelasan":"Perbandingan optimal dalam Open Windrow adalah bahan hijau (mengandung N/nitrogen, seperti daun hijau atau kotoran hewan) : bahan coklat (mengandung C/karbon, seperti daun kering) = 50 : 50."},{"no":18,"soal":"Apa yang termasuk 'bahan hijau' dalam metode Open Windrow?","a":"Daun-daun kering yang sudah layu","b":"Tanah kompos yang sudah jadi","c":"Daun-daun hijau segar atau kotoran hewan yang mengandung nitrogen (N)","d":"Serbuk gergaji dan sekam padi","e":"Kertas bekas yang dihancurkan","kunci":"D","penjelasan":"Bahan hijau dalam Open Windrow adalah bahan yang mengandung nitrogen (N) tinggi, seperti daun-daun hijau segar atau kotoran hewan. Bahan ini diletakkan di atas lapisan bahan coklat."},{"no":19,"soal":"Kapan dilakukan pembalikan (pengadukan) kompos dalam metode Open Windrow?","a":"Setiap jam untuk memastikan aerasi optimal","b":"Pada hari ke-4, jika terjadi perbedaan temperatur signifikan lebih dari 20°C antar titik","c":"Setiap minggu tanpa perlu cek temperatur","d":"Hanya sekali di awal proses","e":"Setelah kompos berwarna hitam sempurna","kunci":"B","penjelasan":"Pembalikan dilakukan pada hari ke-4, apabila terjadi perbedaan temperatur yang signifikan lebih dari 20°C antara titik-titik pengukuran. Pembalikan memastikan oksigen tercampur merata ke seluruh tumpukan."},{"no":20,"soal":"Tanda-tanda bahwa proses Open Windrow sudah selesai adalah...","a":"Kompos berwarna putih, berbau buah-buahan, dan volume bertambah","b":"Kompos berwarna coklat kehitaman, bau menyerupai aroma tanah, dan menyusut 20-40% dari volume awal","c":"Kompos berwarna hijau terang dan volume tetap sama","d":"Kompos sangat panas dan mengeluarkan asap","e":"Kompos berubah menjadi cairan kecoklatan","kunci":"B","penjelasan":"Proses Open Windrow selesai saat: (1) warna sudah coklat kehitaman, (2) bau menyerupai aroma tanah (bukan busuk), dan (3) kompos telah menyusut 20-40% dari volume awal. Setelah itu, tunggu temperatur turun."},{"no":21,"soal":"Apa itu 'biodigester' dan apa produk yang dihasilkannya?","a":"Mesin pengolah plastik menjadi bahan bakar","b":"Reaktor yang mengolah sampah organik dan kotoran ternak menjadi gas bio (biogas) yang bisa digunakan sebagai bahan bakar kompor","c":"Alat penyaringan air limbah rumah tangga","d":"Mesin pencacah kompos skala besar","e":"Sistem irigasi berbasis kompos cair","kunci":"B","penjelasan":"Biodigester adalah reaktor (biasanya dari toren) yang mengolah campuran sampah organik, kotoran ternak, dan air melalui proses anaerobik (tanpa udara) untuk menghasilkan gas bio yang bisa digunakan sebagai bahan bakar kompor!"},{"no":22,"soal":"Perbandingan sampah organik dan kotoran ternak yang dimasukkan ke biodigester adalah...","a":"Sampah organik 3 : kotoran ternak 1","b":"Sampah organik 1 : kotoran ternak 1 dengan tambahan air","c":"Sampah organik 2 : kotoran ternak 1","d":"Hanya kotoran ternak saja tanpa sampah organik","e":"Sampah organik 1 : kotoran ternak 3","kunci":"B","penjelasan":"Untuk biodigester, perbandingan bahan adalah sampah basah (organik) : kotoran ternak = 1 : 1 dengan tambahan air. Campuran ini dimasukkan ke dalam toren hingga setengah penuh, lalu ditutup rapat."},{"no":23,"soal":"Apa tujuan mendiamkan bahan dalam biodigester selama satu minggu di awal?","a":"Agar gas yang dihasilkan mencapai tekanan optimal","b":"Supaya bahan organik dapat menjadi busuk dan proses fermentasi anaerobik dimulai","c":"Untuk mendinginkan campuran sebelum diproses","d":"Agar kotoran ternak mengendap di dasar","e":"Untuk menguji kebocoran instalasi pipa","kunci":"B","penjelasan":"Biodigester didiamkan selama satu minggu di awal agar bahan organik bisa mulai membusuk dan fermentasi anaerobik berjalan. Setelah itu, gas bio mulai diproduksi dan bisa digunakan untuk kompor."},{"no":24,"soal":"Apa itu metode OSOM (Sistem Olah Sampah Organik Mandiri)?","a":"Sistem pengolahan sampah di dalam mesin otomatis bertenaga surya","b":"Cara mengolah sampah organik dalam volume besar secara mandiri di tempat usaha/sekolah yang memiliki ruang cukup","c":"Sistem online untuk memonitor produksi kompos","d":"Metode mengolah sampah anorganik menjadi bahan bangunan","e":"Program gotong royong pengolahan sampah nasional","kunci":"B","penjelasan":"OSOM adalah Sistem Olah Sampah Organik Mandiri—cocok untuk tempat usaha atau sekolah yang menghasilkan sampah organik dalam volume besar dan masih memiliki ruang cukup untuk mengelolanya secara mandiri."},{"no":25,"soal":"Dalam metode OSOM, berapa perbandingan berat cacahan sampah organik sisa makanan dan cacahan daun?","a":"1 bagian sampah makanan : 1 bagian daun (volume), atau 1 : 4 (berat)","b":"1 bagian sampah makanan : 2 bagian daun","c":"3 bagian sampah makanan : 1 bagian daun","d":"Hanya sampah makanan saja tanpa daun","e":"2 bagian sampah makanan : 3 bagian daun","kunci":"A","penjelasan":"Dalam metode OSOM (Sistem Osaki): volume berat 1.0 cacah sampah makanan : 1.0 cacah daun-dahan, atau perbandingan berat 1.0 (cacah sampah organik) : 4.0 (cacah daun). Keseimbangan ini penting untuk proses fermentasi optimal."},{"no":26,"soal":"Berapa kadar air optimal yang harus dijaga dalam proses pengomposan Sistem Osaki/OSOM?","a":"10-20%","b":"30-40%","c":"50-60%","d":"70-80%","e":"90-100% (sangat basah)","kunci":"C","penjelasan":"Kadar air optimal dalam pengomposan Sistem Osaki adalah 50-60%. Cara ceknya: genggam kompos—jika masih sedikit membentuk tapi mudah terurai dari tangan, kadar airnya sudah tepat!"},{"no":27,"soal":"Apa itu sistem Black Soldier Fly (BSF)/Maggot dalam pengolahan sampah organik?","a":"Sistem membasmi lalat dengan bahan kimia","b":"Pemanfaatan larva lalat BSF untuk mengolah sampah organik, menghasilkan maggot sebagai pakan ternak dan pupuk","c":"Metode pengomposan dengan campuran lalat biasa","d":"Sistem pengolahan sampah menggunakan energi larva serangga listrik","e":"Program membunuh lalat di TPS 3R","kunci":"B","penjelasan":"Black Soldier Fly (BSF) adalah lalat yang larvanya (maggot) sangat efektif mengurai sampah organik. Maggot yang dipanen bisa menjadi pakan ternak kaya protein, sementara sisa pengolahan menjadi pupuk. Win-win!"},{"no":28,"soal":"Berapa lama waktu yang diperlukan setelah telur BSF menetas sebelum maggot bisa dipanen?","a":"1-2 hari setelah telur menetas","b":"3-4 hari setelah telur menetas","c":"2-3 minggu setelah telur menetas","d":"3-4 bulan setelah telur menetas","e":"1 tahun setelah telur menetas","kunci":"C","penjelasan":"Setelah telur menetas, beri waktu sekitar 1 minggu agar larva terbentuk sempurna. Waktu terbaik untuk panen maggot BSF adalah 2-3 minggu setelah telur menetas."},{"no":29,"soal":"Apa fungsi 'biopond' dalam budidaya maggot BSF?","a":"Kolam tempat lalat BSF dewasa bertelur","b":"Tempat pembesaran larva lalat BSF yang diisi tanah gembur","c":"Tempat penyimpanan maggot yang sudah dipanen","d":"Wadah fermentasi dedak untuk menarik lalat BSF","e":"Kandang untuk lalat BSF dewasa","kunci":"B","penjelasan":"Biopond adalah tempat pembesaran larva lalat BSF, biasanya dibuat dari kayu atau PVC berisi tanah gembur. Ada dua jenis: biopond biasa (tanpa ramp) untuk larva kecil, dan biopond beramp untuk migrasi prepupa."},{"no":30,"soal":"Apa keunggulan SOSORT dibandingkan metode pengomposan lainnya yang disebutkan dalam pedoman?","a":"Menghasilkan kompos paling cepat dari semua metode","b":"Mudah dipindahkan, tidak dijangkau binatang, rapi, mudah dikontrol, dan tahan lebih dari 20 tahun","c":"Tidak memerlukan biaya apapun","d":"Bisa mengolah sampah plastik menjadi kompos","e":"Menghasilkan biogas sebagai produk sampingan","kunci":"B","penjelasan":"Keunggulan SOSORT: (1) mudah dipindahkan, (2) tidak mudah dijangkau binatang karena tertutup dan tinggi, (3) mudah dikontrol, (4) terlihat rapi, (5) mudah dilakukan siapa pun, dan (6) tahan lama—lebih dari 20 tahun!"},{"no":31,"soal":"Dalam metode komposter konvensional, berapa lama proses pembalikan dilakukan pada tahap awal?","a":"Setiap jam sekali selama 3 hari pertama","b":"Setiap hari selama 1 bulan pertama, kemudian setiap 2 hari sekali","c":"Pembalikan 2 hari sekali dengan menyemprotkan EM4 dan larutan air gula merah, siap dipanen hari ke 7-14","d":"Hanya satu kali pembalikan di awal","e":"Setiap minggu selama 6 bulan","kunci":"C","penjelasan":"Dalam metode komposter: proses pembalikan dilakukan 2 hari sekali dengan menyemprotkan EM4 dan larutan air gula merah. Proses pengeringan dan penggilingan pada hari ke 7-14, kompos sudah siap dipanen!"},{"no":32,"soal":"Apa fungsi 'EM4' atau 'air bekas cucian beras' yang ditambahkan ke keranjang Takakura?","a":"Sebagai pewangi alami agar kompos tidak berbau","b":"Sebagai bioaktivator yang mempercepat proses pengomposan dengan menyediakan mikroorganisme pengurai","c":"Sebagai pupuk tambahan yang langsung menambah nutrisi","d":"Sebagai insektisida alami untuk membunuh serangga","e":"Sebagai bahan pengawet agar kompos tidak rusak","kunci":"B","penjelasan":"EM4 (Effective Microorganisms) adalah bioaktivator yang mengandung jutaan mikroorganisme bermanfaat yang mempercepat proses pengomposan. Air bekas cucian beras juga mengandung mikroba alami yang membantu fermentasi."},{"no":33,"soal":"Dalam metode komposter tanam, apa yang dimaksud dengan 'starter kompos' yang dimasukkan di awal?","a":"Bahan kimia untuk memulai pembakaran sampah","b":"Kompos yang sudah jadi (mature compost) yang mengandung mikroba pengurai sebagai pemicu proses pengomposan baru","c":"Air panas untuk sterilisasi wadah","d":"Tanah biasa yang dicampur air","e":"Pupuk kimia NPK","kunci":"C","penjelasan":"Starter kompos adalah kompos yang sudah jadi (mature compost) yang dimasukkan setebal 5 cm di awal. Kompos ini mengandung mikroba-mikroba pengurai aktif yang berfungsi sebagai 'ragi' yang memulai dan mempercepat pengomposan sampah baru."},{"no":34,"soal":"Mengapa tinggi gundukan kompos dalam Sistem Osaki/OSOM tidak boleh terlalu tinggi maupun terlalu kecil?","a":"Karena ada aturan estetika lingkungan yang membatasi","b":"Gundukan terlalu tinggi sulit diaduk, terlalu kecil suhu tidak bisa panas optimal. Tinggi rata-rata yang baik adalah 1 meter","c":"Karena mesin pencacah hanya bisa memproses ketinggian tertentu","d":"Karena aturan keselamatan kerja melarang gundukan lebih dari 1 meter","e":"Karena volume kompos yang dihasilkan bergantung pada tinggi gundukan","kunci":"B","penjelasan":"Ada keseimbangan yang harus dijaga: gundukan terlalu tinggi/besar menyulitkan pengadukan, sedangkan terlalu kecil tidak akan cukup panas untuk proses fermentasi optimal. Tinggi rata-rata yang disarankan adalah 1 meter."},{"no":35,"soal":"Berapa lama proses kontrol kompos dalam Sistem Osaki/OSOM dari awal hingga produk siap pakai?","a":"1-2 minggu","b":"1 bulan","c":"Rata-rata 4 bulan","d":"1 tahun","e":"6 bulan","kunci":"C","penjelasan":"Proses kontrol pembuatan kompos dalam Sistem Osaki/OSOM hingga produk kompos siap pakai rata-rata membutuhkan 4 bulan. Faktor cuaca dan suhu udara mempengaruhi lamanya proses ini."}]};
+
+/* ═══════════════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════════════ */
+let DB            = {};          // data aktif (dari Sheets atau fallback)
+let isLive        = false;       // true = data dari Sheets
+let selectedCats  = [];
+let quizList      = [];
+let quizIdx       = 0;
+let answered      = false;
+let capturedPhoto = null;
+let camStream     = null;
+
+/* ═══════════════════════════════════════════════════════════
+   BOOT — fetch dari Apps Script
+═══════════════════════════════════════════════════════════ */
+async function boot() {
+  setBar(10);
+
+  // Jika URL belum dikonfigurasi → pakai fallback langsung
+  if (!WEB_APP_URL || WEB_APP_URL.includes('PASTE_URL')) {
+    useFallback('URL Apps Script belum diisi. Menggunakan data lokal.');
+    return;
+  }
+
+  try {
+    setLoadSub('Persiapkan dirimu menjadi Panglima Pelestari Lingkungan');
+    setBar(30);
+
+    const res  = await fetchWithTimeout(`${WEB_APP_URL}?action=getAllSoal`, 10000);
+    const json = await res.json();
+
+    setBar(70);
+
+    if (json.error) throw new Error(json.error);
+    if (!json.data)  throw new Error('Data kosong dari server');
+
+    // Validasi minimal satu sheet punya soal
+    const keys = Object.keys(json.data);
+    if (keys.length === 0) throw new Error('Tidak ada data soal di Spreadsheet');
+
+    DB     = json.data;
+    isLive = true;
+
+    setBar(100);
+    setLoadSub('Ultamas siap beraksi!');
+    setTimeout(hideBoot, 600);
+
+  } catch (err) {
+    console.warn('Gagal fetch Sheets:', err.message);
+    useFallback(`Tidak terhubung ke Online Database. Menggunakan data lokal. (${err.message})`);
+  }
+}
+
+function useFallback(msg) {
+  DB     = FALLBACK_DB;
+  isLive = false;
+  setBar(100);
+  document.getElementById('loading-error').style.display = 'block';
+  document.getElementById('loading-error').textContent   = msg;
+  setTimeout(hideBoot, 1800);
+}
+
+function hideBoot() {
+  document.getElementById('loading-overlay').style.opacity  = '0';
+  document.getElementById('loading-overlay').style.transition = 'opacity 0.4s';
+  setTimeout(() => {
+    document.getElementById('loading-overlay').style.display = 'none';
+    renderMenu();
+  }, 400);
+}
+
+async function retryLoad() {
+  document.getElementById('loading-error').style.display = 'none';
+  document.getElementById('btn-retry').style.display     = 'none';
+  document.getElementById('loading-bar').style.width     = '0%';
+  await boot();
+}
+
+function setBar(pct) { document.getElementById('loading-bar').style.width = pct + '%'; }
+function setLoadSub(t){ document.getElementById('loading-sub').textContent = t; }
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER MENU
+═══════════════════════════════════════════════════════════ */
+function renderMenu() {
+  // Badge LIVE / LOCAL
+  const badge = document.getElementById('sync-badge');
+  if (isLive) {
+    badge.textContent = '🟢 ONLINE';
+    badge.className   = 'sync-badge live';
+    document.getElementById('sheet-info').textContent = '(boleh pilih salah satu, atau sesukamu)';
+  } else {
+    badge.textContent = '📁 OFFLINE';
+    badge.className   = 'sync-badge local';
+    document.getElementById('sheet-info').textContent = '(boleh pilih salah satu, atau sesukamu)';
+  }
+
+  // Render grid kategori
+  const grid = document.getElementById('category-grid');
+  grid.innerHTML = '';
+  Object.entries(CAT_META).forEach(([key, meta]) => {
+    const count = DB[key]?.length || 0;
+    if (count === 0) return;
+    grid.innerHTML += `
+      <div class="cat-card" id="cat-${key}" onclick="toggleCat('${key}')">
+        <span class="cat-check">✓</span>
+        <span class="cat-icon">${meta.icon}</span>
+        <div class="cat-name">${meta.label}</div>
+        <div class="cat-count">${count} soal</div>
+      </div>`;
+  });
+}
+
+function toggleCat(key) {
+  const i = selectedCats.indexOf(key);
+  if (i === -1) selectedCats.push(key);
+  else selectedCats.splice(i, 1);
+  document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('selected'));
+  selectedCats.forEach(k => document.getElementById('cat-' + k)?.classList.add('selected'));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SYNC (manual refresh dari Sheets)
+═══════════════════════════════════════════════════════════ */
+async function syncData() {
+  if (!WEB_APP_URL || WEB_APP_URL.includes('PASTE_URL')) {
+    alert('URL Apps Script belum dikonfigurasi di file HTML ini.');
+    return;
+  }
+  const btn = document.getElementById('btn-sync');
+  btn.classList.add('syncing');
+  btn.innerHTML = '<span class="sync-spinner">🔄</span> Sinkronisasi...';
+  try {
+    const res  = await fetchWithTimeout(`${WEB_APP_URL}?action=getAllSoal`, 12000);
+    const json = await res.json();
+    if (json.error) throw new Error(json.error);
+    DB     = json.data;
+    isLive = true;
+    renderMenu();
+    btn.innerHTML = '✅ Sinkronisasi Berhasil!';
+  } catch (e) {
+    btn.innerHTML = '❌ Gagal – coba lagi';
+  }
+  setTimeout(() => {
+    btn.classList.remove('syncing');
+    btn.innerHTML = '<span>🔄</span> Sinkronisasi Soal';
+  }, 2500);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   QUIZ
+═══════════════════════════════════════════════════════════ */
+function startQuiz() {
+  let pool = [];
+  const cats = selectedCats.length > 0 ? selectedCats : Object.keys(DB);
+  cats.forEach(k => {
+    if (DB[k]) pool = pool.concat(DB[k].map(q => ({ ...q, _cat: k })));
+  });
+  if (pool.length === 0) { alert('Tidak ada soal di kategori yang dipilih.'); return; }
+
+  // Shuffle Fisher-Yates
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  quizList = pool.slice(0, Math.min(10, pool.length));
+  quizIdx  = 0;
+  showScreen('screen-quiz');
+  renderQ();
+}
+
+function renderQ() {
+  const q     = quizList[quizIdx];
+  const total = quizList.length;
+
+  document.getElementById('q-cat').textContent     = CAT_META[q._cat]?.label || q._cat;
+  // document.getElementById('q-num').textContent     = `Soal ${quizIdx + 1}`;
+  document.getElementById('q-num').textContent     = `Pertanyaan`;
+  document.getElementById('q-text').textContent    = q.soal;
+  // document.getElementById('q-counter').textContent = `${quizIdx + 1}/${total}`;
+  document.getElementById('q-counter').textContent = ``;
+  document.getElementById('prog-fill').style.width  = (quizIdx / total * 100) + '%';
+
+  // Reset feedback
+  const fb = document.getElementById('feedback-card');
+  fb.className   = 'feedback-card';
+  fb.style.display = 'none';
+  document.getElementById('btn-next').style.display = 'none';
+  answered = false;
+
+  // Render pilihan
+  const ol = document.getElementById('options-list');
+  ol.innerHTML = '';
+  const lbls = ['A','B','C','D','E'];
+  const vals  = [q.a, q.b, q.c, q.d, q.e].filter(v => v && v.trim() !== '');
+
+  // ✅ FIX: addEventListener bukan inline onclick
+  // Menghindari konflik backtick/kutip di dalam atribut HTML
+  vals.forEach((v, i) => {
+    const l   = lbls[i];
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.id        = 'opt-' + l;
+    btn.innerHTML = '<span class="opt-lbl">' + l + '</span><span>' + v + '</span>';
+    btn.addEventListener('click', () => pickAns(l, q.kunci, q.penjelasan, q));
+    ol.appendChild(btn);
+  });
+}
+
+function pickAns(chosen, correct, explain, q) {
+  if (answered) return;
+  answered = true;
+  const ok = chosen === correct;
+
+  // Highlight pilihan
+  document.querySelectorAll('.opt-btn').forEach(b => {
+    b.disabled = true;
+    const lbl = b.querySelector('.opt-lbl').textContent.trim();
+    if (lbl === correct)             b.classList.add('correct');
+    else if (lbl === chosen && !ok)  b.classList.add('wrong');
+  });
+
+  // Tampilkan feedback + penjelasan
+  const fb = document.getElementById('feedback-card');
+  fb.style.display = 'block';
+  fb.className     = 'feedback-card ' + (ok ? 'correct' : 'wrong');
+  document.getElementById('fb-head').innerHTML = ok
+    ? '\u2705 Jawaban Benar!'
+    : '\u274C Jawaban Salah! Kunci: <strong>' + correct + '</strong>';
+  document.getElementById('fb-text').textContent = explain;
+
+  // Log ke Sheets (fire-and-forget, opsional)
+  if (isLive && WEB_APP_URL && !WEB_APP_URL.includes('PASTE_URL') && q) {
+    try {
+      fetch(WEB_APP_URL, {
+        method : 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body   : JSON.stringify({
+          action   : 'saveLog',
+          kategori : q._cat   || '',
+          noSoal   : String(q.no || ''),
+          jawaban  : chosen,
+          kunci    : correct,
+          pemenang : '',
+          lawan    : ''
+        })
+      }).catch(() => {});
+    } catch(_){}
+  }
+
+  // Tombol lanjut
+  const nx = document.getElementById('btn-next');
+  nx.style.display = 'flex';
+  // nx.textContent   = quizIdx + 1 < quizList.length ? 'Pertanyaan Berikutnya \u279C' : '\uD83C\uDFC1 Selesai';
+  nx.textContent   = quizIdx + 1 < quizList.length ? 'Lanjutkan Permainan Ular Tangga atau klik disini jika mau coba pertanyaan berikutnya? ' : 'Silahkan Acak pertanyaan kembali !';
+}
+
+function nextQ() {
+  quizIdx++;
+  if (quizIdx >= quizList.length) { goMenu(); return; }
+  renderQ();
+  window.scrollTo(0, 0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NAVIGASI
+═══════════════════════════════════════════════════════════ */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const navMap = { 'screen-menu':'nav-home', 'screen-quiz':'nav-quiz', 'screen-award':'nav-award' };
+  if (navMap[id]) document.getElementById(navMap[id])?.classList.add('active');
+  window.scrollTo(0, 0);
+}
+function goMenu()    { showScreen('screen-menu'); }
+function showAward() { showScreen('screen-award'); }
+
+/* ═══════════════════════════════════════════════════════════
+   KAMERA
+═══════════════════════════════════════════════════════════ */
+async function openCam() {
+  try {
+    camStream = await navigator.mediaDevices.getUserMedia({ video:{ facingMode:'user' }, audio:false });
+    document.getElementById('video-el').srcObject = camStream;
+    document.getElementById('video-el').style.display  = 'block';
+    document.getElementById('cam-ph').style.display    = 'none';
+    document.getElementById('cam-ctrl').style.display  = 'block';
+    document.getElementById('photo-el').style.display  = 'none';
+    document.getElementById('retake-area').style.display = 'none';
+  } catch { alert('Kamera tidak tersedia. Gunakan "Pilih Foto" dari galeri.'); }
+}
+
+function closeCam() {
+  if (camStream) { camStream.getTracks().forEach(t => t.stop()); camStream = null; }
+  document.getElementById('video-el').style.display  = 'none';
+  document.getElementById('cam-ctrl').style.display  = 'none';
+  document.getElementById('cam-ph').style.display    = 'block';
+}
+
+function snapPhoto() {
+  const vid = document.getElementById('video-el');
+  const cnv = document.getElementById('canvas-hidden');
+  cnv.width  = vid.videoWidth  || 400;
+  cnv.height = vid.videoHeight || 400;
+  cnv.getContext('2d').drawImage(vid, 0, 0);
+  capturedPhoto = cnv.toDataURL('image/jpeg', 0.85);
+  showPhoto(); closeCam();
+}
+
+function pickFile() { document.getElementById('file-input').click(); }
+
+function fileChosen(input) {
+  const file = input.files[0]; if (!file) return;
+  const rd   = new FileReader();
+  rd.onload  = e => { capturedPhoto = e.target.result; showPhoto(); };
+  rd.readAsDataURL(file);
+}
+
+function showPhoto() {
+  document.getElementById('photo-el').src           = capturedPhoto;
+  document.getElementById('photo-el').style.display = 'block';
+  document.getElementById('cam-ph').style.display   = 'none';
+  document.getElementById('retake-area').style.display = 'block';
+}
+
+function retakePhoto() {
+  capturedPhoto = null;
+  document.getElementById('photo-el').style.display    = 'none';
+  document.getElementById('retake-area').style.display = 'none';
+  document.getElementById('cam-ph').style.display      = 'block';
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KARTU PENGHARGAAN
+═══════════════════════════════════════════════════════════ */
+function makeCard() {
+  const winner   = document.getElementById('inp-winner').value.trim();
+  const opponent = document.getElementById('inp-opponent').value.trim();
+  if (!winner)   { alert('Nama pemenang harus diisi!'); return; }
+  if (!opponent) { alert('Nama lawan harus diisi!'); return; }
+
+  document.getElementById('ac-winner').textContent = winner;
+  document.getElementById('ac-loser').textContent  = opponent;
+  document.getElementById('ac-date').textContent   =
+    new Date().toLocaleDateString('id-ID', { day:'2-digit', month:'long', year:'numeric' });
+
+  const wrap = document.getElementById('ac-photo-wrap');
+  wrap.innerHTML = capturedPhoto
+    ? `<img src="${capturedPhoto}" alt="Selfie pemenang" />`
+    : `<div class="ac-photo-placeholder">🤳</div>`;
+
+  // Reset canvas sebelum buka modal (agar tidak tampilkan kartu lama)
+  document.getElementById('canvas-preview-wrap').style.display = 'none';
+  document.getElementById('modal-award').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-award').classList.remove('open');
+  // Reset canvas preview saat modal ditutup
+  document.getElementById('canvas-preview-wrap').style.display = 'none';
+  const cvs = document.getElementById('card-canvas');
+  const ctx = cvs.getContext('2d');
+  ctx.clearRect(0, 0, cvs.width, cvs.height);
+}
+
+/* ─── Share helpers ─── */
+/* ═══════════════════════════════════════════════════════════
+   GAMBAR KARTU KE CANVAS (100% mobile-friendly)
+   Tidak pakai html2canvas — digambar langsung via Canvas API
+   User tinggal tekan lama canvas → Simpan Foto di galeri
+═══════════════════════════════════════════════════════════ */
+function saveCard() {
+  const winner   = document.getElementById('ac-winner').textContent.trim();
+  const opponent = document.getElementById('ac-loser').textContent.trim();
+  const dateStr  = document.getElementById('ac-date').textContent.trim();
+  const photoWrap = document.getElementById('ac-photo-wrap');
+  const photoImg  = photoWrap.querySelector('img');
+
+  // Ukuran kartu portrait 2× untuk retina
+  const W = 640, H = 920;
+  const cvs = document.getElementById('card-canvas');
+  cvs.width  = W;
+  cvs.height = H;
+  const ctx  = cvs.getContext('2d');
+
+  // ── Background gradient ──────────────────────────────────
+  const bg = ctx.createLinearGradient(0, 0, W, H);
+  bg.addColorStop(0,    '#0d2b1a');
+  bg.addColorStop(0.5,  '#1a4a2e');
+  bg.addColorStop(1,    '#2d5a38');
+  ctx.fillStyle = bg;
+  roundRect(ctx, 0, 0, W, H, 32);
+  ctx.fill();
+
+  // ── Border emas ──────────────────────────────────────────
+  ctx.strokeStyle = '#d4a843';
+  ctx.lineWidth   = 6;
+  roundRect(ctx, 3, 3, W-6, H-6, 30);
+  ctx.stroke();
+
+  // ── Stripe atas ──────────────────────────────────────────
+  const stripe = ctx.createLinearGradient(0, 0, W, 0);
+  stripe.addColorStop(0,   '#d4a843');
+  stripe.addColorStop(0.5, '#f0c96a');
+  stripe.addColorStop(1,   '#d4a843');
+  ctx.fillStyle = stripe;
+  roundRectTop(ctx, 3, 3, W-6, 12, 30);
+  ctx.fill();
+
+  // ── Ikon daun ────────────────────────────────────────────
+  ctx.font      = '52px serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('\uD83C\uDF3F', W/2, 108);
+
+  // ── Judul utama ──────────────────────────────────────────
+  ctx.fillStyle = '#d4a843';
+  ctx.font      = 'bold 26px Georgia, serif';
+  ctx.textAlign = 'center';
+  wrapText(ctx, 'Panglima Pelestari Lingkungan', W/2, 160, W-80, 34);
+  wrapText(ctx, 'Bhumi Handayani', W/2, 196, W-80, 34);
+
+  // ── Sub judul ────────────────────────────────────────────
+  ctx.fillStyle = '#8dc9a0';
+  ctx.font      = '18px sans-serif';
+  ctx.fillText('Penghargaan Kuis Lingkungan Hidup', W/2, 236);
+
+  // ── Divider emas ─────────────────────────────────────────
+  const divGrad = ctx.createLinearGradient(60, 0, W-60, 0);
+  divGrad.addColorStop(0,   'transparent');
+  divGrad.addColorStop(0.5, '#d4a843');
+  divGrad.addColorStop(1,   'transparent');
+  ctx.strokeStyle = divGrad;
+  ctx.lineWidth   = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(60, 256); ctx.lineTo(W-60, 256);
+  ctx.stroke();
+
+  // ── Foto selfie (lingkaran) ──────────────────────────────
+  const cx = W/2, cy = 360, r = 90;
+  // Lingkaran border emas
+  ctx.beginPath();
+  ctx.arc(cx, cy, r+6, 0, Math.PI*2);
+  ctx.fillStyle = '#d4a843';
+  ctx.fill();
+
+  if (photoImg && photoImg.src) {
+    // Gambar foto dalam lingkaran clip
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI*2);
+    ctx.clip();
+    try {
+      ctx.drawImage(photoImg, cx-r, cy-r, r*2, r*2);
+    } catch(e) {
+      drawPhotoPlaceholder(ctx, cx, cy, r);
+    }
+    ctx.restore();
+  } else {
+    // Placeholder jika tidak ada foto
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba(255,255,255,0.08)';
+    ctx.fill();
+    ctx.restore();
+    drawPhotoPlaceholder(ctx, cx, cy, r);
+  }
+
+  // ── Label "diberikan kepada" ─────────────────────────────
+  ctx.fillStyle = '#8dc9a0';
+  ctx.font      = '17px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('Penghargaan Ini Diberikan Kepada', W/2, 490);
+
+  // ── Nama Pemenang ────────────────────────────────────────
+  ctx.fillStyle = '#ffffff';
+  ctx.font      = 'bold 36px Georgia, serif';
+  ctx.textAlign = 'center';
+  wrapText(ctx, winner, W/2, 535, W-60, 42);
+
+  // ── VS ───────────────────────────────────────────────────
+  ctx.fillStyle = '#f0c96a';
+  ctx.font      = '17px sans-serif';
+  ctx.fillText('\uD83C\uDD9A Mengalahkan', W/2, 590);
+
+  // ── Nama Lawan ───────────────────────────────────────────
+  ctx.fillStyle = '#cde8d4';
+  ctx.font      = 'bold 26px sans-serif';
+  ctx.textAlign = 'center';
+  wrapText(ctx, opponent, W/2, 628, W-60, 32);
+
+  // ── Badge emas ───────────────────────────────────────────
+  const badgeGrad = ctx.createLinearGradient(60, 660, W-60, 720);
+  badgeGrad.addColorStop(0, '#d4a843');
+  badgeGrad.addColorStop(1, '#b8882a');
+  ctx.fillStyle = badgeGrad;
+  roundRect(ctx, 60, 660, W-120, 100, 16);
+  ctx.fill();
+
+  ctx.fillStyle = '#1a4a2e';
+  ctx.font      = 'bold 22px Georgia, serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('\uD83C\uDFC6 Panglima Pelestari Lingkungan', W/2, 700);
+  ctx.font      = '15px sans-serif';
+  ctx.fillText('Bhumi Handayani \u2013 Kuis Lingkungan Hidup', W/2, 726);
+
+  // ── Tanggal ──────────────────────────────────────────────
+  ctx.fillStyle = 'rgba(141,201,160,0.5)';
+  ctx.font      = '14px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(dateStr, W/2, 792);
+
+  // ── Stripe bawah ─────────────────────────────────────────
+  ctx.fillStyle = stripe;
+  roundRectBottom(ctx, 3, H-15, W-6, 12, 30);
+  ctx.fill();
+
+  // ── Tampilkan canvas preview ─────────────────────────────
+  const wrap = document.getElementById('canvas-preview-wrap');
+  wrap.style.display = 'block';
+  wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+  // ── Coba Web Share API dengan file (Android Chrome) ──────
+  cvs.toBlob(blob => {
+    const file = new File([blob], 'kartu-panglima-bhumi-handayani.png', { type:'image/png' });
+    if (navigator.canShare && navigator.canShare({ files:[file] })) {
+      navigator.share({
+        title: 'Kartu Panglima Pelestari Lingkungan',
+        files : [file]
+      }).catch(() => {}); // user cancel = no-op
+    }
+    // iOS Safari: tampilkan canvas, user tekan lama untuk simpan
+  }, 'image/png');
+}
+
+/* ── Helper: Gambar placeholder foto ──── */
+function drawPhotoPlaceholder(ctx, cx, cy, r) {
+  ctx.font      = (r * 0.9) + 'px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = 'rgba(255,255,255,0.25)';
+  ctx.fillText('\uD83E\uDD33', cx, cy);
+  ctx.textBaseline = 'alphabetic';
+}
+
+/* ── Helper: Wrap text panjang ──── */
+function wrapText(ctx, text, x, y, maxW, lineH) {
+  const words = text.split(' ');
+  let line = '';
+  for (let i = 0; i < words.length; i++) {
+    const test = line + words[i] + ' ';
+    if (ctx.measureText(test).width > maxW && i > 0) {
+      ctx.fillText(line.trim(), x, y);
+      line = words[i] + ' ';
+      y += lineH;
+    } else { line = test; }
+  }
+  ctx.fillText(line.trim(), x, y);
+}
+
+/* ── Helper: Rounded rect (semua sudut) ── */
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.lineTo(x+w-r, y);
+  ctx.arcTo(x+w, y,   x+w, y+r,   r);
+  ctx.lineTo(x+w, y+h-r);
+  ctx.arcTo(x+w, y+h, x+w-r, y+h, r);
+  ctx.lineTo(x+r, y+h);
+  ctx.arcTo(x,   y+h, x,   y+h-r, r);
+  ctx.lineTo(x,   y+r);
+  ctx.arcTo(x,   y,   x+r, y,     r);
+  ctx.closePath();
+}
+
+/* ── Helper: Rounded rect hanya sudut atas ── */
+function roundRectTop(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r, y);
+  ctx.lineTo(x+w-r, y);
+  ctx.arcTo(x+w, y, x+w, y+r, r);
+  ctx.lineTo(x+w, y+h);
+  ctx.lineTo(x,   y+h);
+  ctx.lineTo(x,   y+r);
+  ctx.arcTo(x, y, x+r, y, r);
+  ctx.closePath();
+}
+
+/* ── Helper: Rounded rect hanya sudut bawah ── */
+function roundRectBottom(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x+w, y);
+  ctx.lineTo(x+w, y+h-r);
+  ctx.arcTo(x+w, y+h, x+w-r, y+h, r);
+  ctx.lineTo(x+r, y+h);
+  ctx.arcTo(x, y+h, x, y+h-r, r);
+  ctx.lineTo(x, y);
+  ctx.closePath();
+}
+
+function shareWAStory() {
+  const w = document.getElementById('ac-winner').textContent;
+  const l = document.getElementById('ac-loser').textContent;
+  const t = `🏆 *PANGLIMA PELESTARI LINGKUNGAN BHUMI HANDAYANI* 🤖\n\n✨ *${w}* berhasil mengalahkan *${l}* dalam Kuis Pelestarian Lingkungan!\n\n🌍 Yuk ikut kuis & jaga lingkungan kita!`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(t)}`, '_blank');
+}
+
+function shareWAChat() {
+  const w = document.getElementById('ac-winner').textContent;
+  const l = document.getElementById('ac-loser').textContent;
+  const t = `🏆 *PANGLIMA PELESTARI LINGKUNGAN*\n🤖 *Bhumi Handayani*\n\n🥇 *${w}* menang atas *${l}*!\n\nYuk ikut kuis lingkungan dan buktikan kamu peduli alam! 🌍`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(t)}`, '_blank');
+}
+
+async function shareSocial() {
+  const w = document.getElementById('ac-winner').textContent;
+  const l = document.getElementById('ac-loser').textContent;
+  const t = `🏆 PANGLIMA PELESTARI LINGKUNGAN BHUMI HANDAYANI 🤖\n\n${w} mengalahkan ${l} dalam kuis lingkungan!\n\n#BhumiHandayani #PelestarianLingkungan #LingkunganHidup #GoGreen`;
+  if (navigator.share) {
+    try { await navigator.share({ title:'Panglima Pelestari Lingkungan', text:t }); return; } catch {}
+  }
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}`, '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   UTILS
+═══════════════════════════════════════════════════════════ */
+function fetchWithTimeout(url, ms) {
+  return Promise.race([
+    fetch(url),
+    new Promise((_, rej) => setTimeout(() => rej(new Error('Timeout')), ms))
+  ]);
+}
+
+/* ─── BOOT ─── */
+boot();
+
+/* ─── SERVICE WORKER (PWA Offline) ─── */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js', { scope: '/' })
+      .then(reg  => console.log('[PWA] SW registered, scope:', reg.scope))
+      .catch(err => console.warn('[PWA] SW failed:', err));
+  });
+}
+</script>
+</body>
+</html>
